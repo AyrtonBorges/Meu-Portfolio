@@ -1,0 +1,614 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgb(41, 41, 41);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center; /* Add this line to center the navbar */
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e63946;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+/* Botões de navegação */
+.ui-btn {
+    --btn-default-bg: rgb(41, 41, 41);
+    --btn-hover-bg: rgb(51, 51, 51);
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #e63946;
+    --default-btn-color: #fff;
+    --font-size: 16px;
+    --font-weight: 600;
+    --font-family: Menlo,Roboto Mono,monospace;
+  }
+  
+  .ui-btn {
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+    text-decoration: none; /* Adiciona essa linha para remover a sublinhado */
+  }
+  
+  .ui-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+  }
+  
+  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+
+.ui-btn:hover, .ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span, .ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before, .ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!%";
+  }
+
+  20% {
+    content: "#$_&*";
+  }
+
+  25% {
+    content: "№:0*&@";
+  }
+
+  30% {
+    content: "#{+.#%$";
+  }
+
+  35% {
+    content: "$@}-%&#?";
+  }
+
+  40% {
+    content: "?%{4@#%";
+  }
+
+  45% {
+    content: "@#=.,^$%!";
+  }
+
+  50% {
+    content: "##$@?2@%%";
+  }
+
+  55% {
+    content: "*&%&\;1}]";
+  }
+
+  60% {
+    content: "!?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|${f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "@{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1#_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+/* Seção Home */
+#home {
+    background-image: url('src/wallpaper.gif');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+}
+
+#home .intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5); /* Background semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#home .intro-text {
+    max-width: 400px;
+}
+
+#home .intro-image img {
+    max-width: 200px;
+    border-radius: 50%;
+    border: 4px solid #e63946;
+}
+
+#home .ui-btn {
+    border-radius: 5px;
+    --btn-default-bg: rgb(231, 41, 41);
+    --btn-hover-bg: rgb(231, 51, 51);
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(231, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #8a0000;
+    --default-btn-color: #fff;
+    --font-size: 16px;
+    --font-weight: 600;
+    --font-family: Menlo,Roboto Mono,monospace;
+  }
+  
+#home .ui-btn {
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+    text-decoration: none; /* Adiciona essa linha para remover a sublinhado */
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+  
+#home  .ui-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+  }
+  
+#home  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+
+#home .ui-btn:hover, .ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+#home .ui-btn:hover span, .ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+#home .ui-btn:hover span::before, .ui-btn:focus span::before {
+  animation: chitchat2 linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat2 {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".*";
+  }
+
+  10% {
+    content: "^{@";
+  }
+
+  15% {
+    content: "-!&%@#";
+  }
+
+  20% {
+    content: "#@#$_&*@";
+  }
+
+  25% {
+    content: "№:0*#@&@#";
+  }
+
+  30% {
+    content: "#{+.#$#%$%";
+  }
+
+  35% {
+    content: "$@}-%&#$#!?";
+  }
+
+  40% {
+    content: "?%{4@&#!%";
+  }
+
+  45% {
+    content: "@#=.,^*#$%!";
+  }
+
+  50% {
+    content: "##$@?2$@.%%";
+  }
+
+  55% {
+    content: "*&%&\;<#1#}]";
+  }
+
+  60% {
+    content: "!?{#$#@%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|${#@$##f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "@{@#%4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1¨##_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0!&%";
+    right: 0;
+  }
+
+  85% {
+    content: "]*&>'";
+    right: 0;
+  }
+
+  90% {
+    content: "44";
+    right: 0;
+  }
+
+  95% {
+    content: "21";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}
+
+/* Seções */
+section {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e63946;
+}
+
+#about p,
+#skills .skills-container,
+#projects .project-gallery,
+#contact form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Habilidades */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    text-align: center;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.skill i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #e63946;
+}
+
+.skill h3 {
+    margin-top: 0;
+    color: #e63946;
+}
+
+.skill p {
+    margin: 0;
+}
+
+/* Projetos */
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: #e63946;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.pr-btn {
+    border-radius: 5px;
+    --btn-default-bg: rgb(231, 41, 41);
+    --btn-hover-bg: rgb(231, 51, 51);
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(231, 0, 0, 0.137);
+    --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+    --hover-btn-color: #8a0000;
+    --default-btn-color: #fff;
+    --font-size: 16px;
+    --font-weight: 600;
+    --font-family: Menlo,Roboto Mono,monospace;
+  }
+  
+.pr-btn {
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+    text-decoration: none; /* Adiciona essa linha para remover a sublinhado */
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+.pr-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+  }
+  
+.pr-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+
+.pr-btn:hover, .ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.pr-btn:hover span, .ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.pr-btn:hover span::before, .ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+/* Contato */
+#contact {
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#contact label {
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #e63946;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #a0273b;
+}
+
+#contact .contact-links {
+    margin-top: 20px;
+}
+
+#contact .contact-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #e63946;
+    text-decoration: none;
+}
+
+#contact .contact-links a:hover {
+    color: #a0273b;
+}
+
+#contact .contact-links i {
+    margin-right: 5px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-links {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #e63946;
+}
