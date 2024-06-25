@@ -1,9 +1,7 @@
 {
-  "name": "meu-projeto",
+  "name": "meu-portfolio",
   "version": "1.0.0",
   "scripts": {
     "build": "mkdir -p build && cp -r * build/ && rm -rf build/{node_modules,.github}"
-  },
-  "dependencies": {
   }
 }
