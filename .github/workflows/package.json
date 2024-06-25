@@ -5,6 +5,5 @@
     "build": "mkdir -p build && cp -r * build/ && rm -rf build/{node_modules,.github}"
   },
   "dependencies": {
-    // suas dependências aqui
   }
 }
