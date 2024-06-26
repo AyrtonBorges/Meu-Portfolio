@@ -30,9 +30,13 @@ jobs:
         with:
           ruby-version: '3.0' # Ajuste a versão conforme necessário
 
+      - name: Install Jekyll and Bundler
+        run: gem install jekyll bundler
+
       - name: Install dependencies
         run: |
-          gem install bundler
+          bundle init
+          echo "gem 'jekyll'" >> Gemfile
           bundle install
 
       - name: Setup GitHub Pages
