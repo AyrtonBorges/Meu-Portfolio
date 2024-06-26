@@ -1,5 +1,5 @@
-# Workflow para construir e implantar um site Jekyll no GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+# Workflow para construir e implantar uma página web estática no GitHub Pages
+name: Deploy Static Site to GitHub Pages
 
 on:
   # Dispara o workflow em push para a branch main
@@ -25,30 +25,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          ruby-version: '3.0' # Ajuste a versão conforme necessário
-
-      - name: Install Jekyll and Bundler
-        run: gem install jekyll bundler
+          node-version: '16' # Ajuste a versão conforme necessário
 
       - name: Install dependencies
         run: |
-          bundle init
-          echo "gem 'jekyll'" >> Gemfile
-          bundle install
+          npm install
 
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v3
-
-      - name: Build site with Jekyll
-        run: bundle exec jekyll build
+      - name: Build site
+        run: |
+          npm run build
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./_site
+          path: ./build # Ajuste este caminho conforme a estrutura do seu projeto
 
   deploy:
     runs-on: ubuntu-latest
@@ -61,4 +54,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          path: ./_site
+          path: ./build # Ajuste este caminho conforme a estrutura do seu projeto
