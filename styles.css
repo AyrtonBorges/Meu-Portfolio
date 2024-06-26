@@ -491,6 +491,8 @@ section h2 {
   cursor: pointer;
   position: relative; /* Required for tooltip positioning */
   overflow: hidden; /* Required to clip the blur effect */
+  min-width: calc(100% / 3);
+  box-sizing: border-box;
 }
 
 .skill i {
@@ -528,6 +530,39 @@ section h2 {
 
 .skill-content {
   transition: filter 0.3s ease;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
 }
 
 /* Modal Styles */

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/icon.png">
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -35,7 +36,7 @@
                 <a href="#projects" class="ui-btn"><span> Veja meus projetos</span> </a>
             </div>
             <div class="intro-image">
-                <img src="src/eu.png" alt="Foto de [Seu Nome]">
+                <img src="src/eu.png" alt="Foto de Ayrton Borges">
             </div>
         </div>
     </section>
@@ -72,92 +73,95 @@
     <!-- Minhas Habilidades -->
     <section id="skills">
         <h2>Habilidades</h2>
-        <div class="skills-container">
-            
-            <div class="skill" onclick="openSkillModal('html5')">
-                <div class="skill-content">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
-                    <p>Desenvolvimento de estruturas semânticas e acessíveis com HTML5.</p>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel">
+                <div class="skill" onclick="openSkillModal('html5')">
+                    <div class="skill-content">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                        <p>Desenvolvimento de estruturas semânticas e acessíveis com HTML5.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('css3')">
+                    <div class="skill-content">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                        <p>Estilização avançada utilizando CSS3 e preprocessadores.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('javascript')">
+                    <div class="skill-content">
+                        <i class="fab fa-js-square"></i>
+                        <h3>JavaScript</h3>
+                        <p>Criação de interatividade e funcionalidades dinâmicas com JavaScript.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('react')">
+                    <div class="skill-content">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                        <p>Conhecimento básico de interfaces de usuário modernas com React.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('nodejs')">
+                    <div class="skill-content">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Node.js</h3>
+                        <p>Construção de servidores eficientes e escaláveis com Node.js.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('python')">
+                    <div class="skill-content">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                        <p>Programação avançada em Python para diversas aplicações.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('docker')">
+                    <div class="skill-content">
+                        <i class="fab fa-docker"></i>
+                        <h3>Docker</h3>
+                        <p>Containerização de aplicações para garantir consistência e portabilidade.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('java')">
+                    <div class="skill-content">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                        <p>Desenvolvimento de aplicações robustas e escaláveis com Java.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('typescript')">
+                    <div class="skill-content">
+                        <i class="fab fa-js-square"></i>
+                        <h3>TypeScript</h3>
+                        <p>Conhecimento básico sobre TypeScript para aplicações usando o framework Next.js.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('nextjs')">
+                    <div class="skill-content">
+                        <i class="fab fa-react"></i>
+                        <h3>Next.js</h3>
+                        <p>Framework React para aplicações web com server-side rendering (SSR) e estáticas.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('sql')">
+                    <div class="skill-content">
+                        <i class="fas fa-database"></i>
+                        <h3>SQL</h3>
+                        <p>Gerenciamento e manipulação de bancos de dados relacionais.</p>
+                    </div>
+                </div>
+                <div class="skill" onclick="openSkillModal('git')">
+                    <div class="skill-content">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Git & GitHub</h3>
+                        <p>Controle de versão e colaboração em projetos utilizando Git e GitHub.</p>
+                    </div>
                 </div>
             </div>
-            <div class="skill" onclick="openSkillModal('css3')">
-                <div class="skill-content">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                    <p>Estilização avançada utilizando CSS3 e preprocessadores.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('javascript')">
-                <div class="skill-content">
-                    <i class="fab fa-js-square"></i>
-                    <h3>JavaScript</h3>
-                    <p>Criação de interatividade e funcionalidades dinâmicas com JavaScript.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('react')">
-                <div class="skill-content">
-                    <i class="fab fa-react"></i>
-                    <h3>React</h3>
-                    <p>Conhecimento básico de interfaces de usuário modernas com React.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('nodejs')">
-                <div class="skill-content">
-                    <i class="fab fa-node-js"></i>
-                    <h3>Node.js</h3>
-                    <p>Construção de servidores eficientes e escaláveis com Node.js.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('python')">
-                <div class="skill-content">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
-                    <p>Programação avançada em Python para diversas aplicações.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('docker')">
-                <div class="skill-content">
-                    <i class="fab fa-docker"></i>
-                    <h3>Docker</h3>
-                    <p>Containerização de aplicações para garantir consistência e portabilidade.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('java')">
-                <div class="skill-content">
-                    <i class="fab fa-java"></i>
-                    <h3>Java</h3>
-                    <p>Desenvolvimento de aplicações robustas e escaláveis com Java.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('typescript')">
-                <div class="skill-content">
-                    <i class="fab fa-js-square"></i>
-                    <h3>TypeScript</h3>
-                    <p>Conhecimento básico sobre TypeScript para aplicações usando o framework Next.js.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('nextjs')">
-                <div class="skill-content">
-                    <i class="fab fa-react"></i>
-                    <h3>Next.js</h3>
-                    <p>Framework React para aplicações web com server-side rendering (SSR) e estáticas.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('sql')">
-                <div class="skill-content">
-                    <i class="fas fa-database"></i>
-                    <h3>SQL</h3>
-                    <p>Gerenciamento e manipulação de bancos de dados relacionais.</p>
-                </div>
-            </div>
-            <div class="skill" onclick="openSkillModal('git')">
-                <div class="skill-content">
-                    <i class="fab fa-git-alt"></i>
-                    <h3>Git & GitHub</h3>
-                    <p>Controle de versão e colaboração em projetos utilizando Git e GitHub.</p>
-                </div>
-            </div>
+            <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
         </div>
     </section>
     
@@ -192,7 +196,7 @@
 
     <section id="contact">
         <h2>Contato</h2>
-        <form action="https://example.com/form" method="post">
+        <form action="https://formspree.io/f/mblrrwwl" method="post">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
@@ -204,14 +208,14 @@
         <div class="social-links contact-links">
             <a href="https://instagram.com/ayrtoncborges" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             <a href="https://twitter.com/ayrtoncborges" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-            <a href="https://linkedin.com/in/ayrtoncborges" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ayrton-borges-620aa1168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
     </section>
     
     <footer>
         <div class="social-links">
             <a href="https://github.com/ayrtonborges" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/ayrtoncborges" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/ayrton-borges-620aa1168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
             <!-- Adicione mais links conforme necessário -->
         </div>
         <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
