@@ -69,9 +69,89 @@ const skillDetails = {
         description: "Gerenciamento e manipulação de bancos de dados relacionais. Habilidade em escrever consultas complexas, normalização de dados, e uso de sistemas de gerenciamento como MySQL e PostgreSQL."
     },
     git: {
-        title: "Git & GitHub",
-        description: "Controle de versão e colaboração em projetos utilizando Git e GitHub. Experiência em ramificação, mesclagem, resolução de conflitos e gerenciamento de repositórios."
+        title: "Git",
+        description: "Controle de versão e colaboração em projetos utilizando Git. Experiência em ramificação, mesclagem, resolução de conflitos e gerenciamento de repositórios."
     },    
+    vscode: {
+        title: "Visual Studio Code",
+        description: "Editor de código fonte gratuito e aberto. Proporciona uma experiência de desenvolvimento leve e personalizável, com suporte a uma grande variedade de extensões."
+    },
+    github: {
+        title: "GitHub",
+        description: "Plataforma de hospedagem de código fonte e colaboração em projetos. Facilita o versionamento, controle de código e colaboração entre equipes de desenvolvimento."
+    },
+    jenkins: {
+        title: "Jenkins",
+        description: "Ferramenta de automação de integração contínua. Utilizada para construir, testar e implantar software de forma contínua e automática."
+    },
+    eclipse: {
+        title: "Eclipse",
+        description: "Ambiente de desenvolvimento integrado para diversas linguagens de programação. Popular por seu suporte robusto ao desenvolvimento Java."
+    },
+    netbeans: {
+        title: "NetBeans",
+        description: "Ambiente de desenvolvimento integrado para Java. Oferece ferramentas poderosas para o desenvolvimento de aplicativos desktop, móveis e web."
+    },
+    pycharm: {
+        title: "PyCharm",
+        description: "Ambiente de desenvolvimento integrado para Python. Proporciona uma experiência rica com ferramentas de produtividade, suporte a depuração e integração com frameworks populares."
+    },
+    platformio: {
+        title: "Platform.io",
+        description: "Plataforma de desenvolvimento integrado para Internet das Coisas (IoT). Suporta uma vasta gama de placas de desenvolvimento e frameworks, facilitando o desenvolvimento e a depuração."
+    },
+    postman: {
+        title: "Postman",
+        description: "Plataforma de colaboração para desenvolvimento de APIs. Simplifica a criação, teste e documentação de APIs, facilitando o trabalho em equipe."
+    },
+    springtools: {
+        title: "Spring Tools 4",
+        description: "Conjunto de ferramentas para desenvolvimento com o framework Spring. Auxilia no desenvolvimento de aplicações Java baseadas no Spring Framework."
+    },
+    trello: {
+        title: "Trello",
+        description: "Organização de tarefas e projetos em quadros virtuais. Facilita a visualização e gerenciamento de tarefas em equipe."
+    },
+    jira: {
+        title: "Jira",
+        description: "Gerenciamento de projetos com foco em desenvolvimento de software. Oferece recursos avançados para rastreamento de bugs, gestão de tarefas e colaboração em equipe."
+    },
+    lucidapp: {
+        title: "Lucid.app",
+        description: "Plataforma de gerenciamento de projetos e colaboração para equipes, com recursos visuais e de planejamento. Facilita a criação de diagramas e fluxogramas."
+    },
+    modelio: {
+        title: "Modelio",
+        description: "Ferramenta de modelagem e design para desenvolvimento de software. Suporta UML, BPMN e outras linguagens de modelagem."
+    },
+    libreoffice: {
+        title: "LibreOffice",
+        description: "Suite de aplicativos para edição de textos, criação de planilhas e apresentações. Oferece uma alternativa gratuita e aberta aos aplicativos de escritório tradicionais."
+    },
+    googledrive: {
+        title: "Google Drive",
+        description: "Armazenamento e compartilhamento de arquivos online. Permite colaboração em tempo real em documentos, planilhas e apresentações."
+    },
+    slack: {
+        title: "Slack",
+        description: "Plataforma de comunicação para equipes. Facilita a troca de mensagens, arquivos e colaboração em projetos através de canais organizados."
+    },
+    notion: {
+        title: "Notion",
+        description: "Plataforma que permite criar notas, banco de dados, listas de tarefas, entre outros recursos. Ideal para organização pessoal e em equipe, com diversas funcionalidades integradas."
+    },
+    canva: {
+        title: "Canva",
+        description: "Plataforma online para criação de designs e imagens. Oferece uma interface intuitiva com diversas ferramentas para design gráfico."
+    },
+    figma: {
+        title: "Figma",
+        description: "Criação de designs e prototipagem de interfaces de usuário. Permite colaboração em tempo real e integra diversas ferramentas de design."
+    },
+    mysqlworkbench: {
+        title: "MySQL Workbench",
+        description: "Ferramenta para modelagem, desenvolvimento e administração de bancos de dados MySQL. Facilita a criação de modelos ER, design de esquemas e administração de bases de dados."
+    },
 };
 
 function openSkillModal(skill) {
@@ -91,11 +171,25 @@ function closeSkillModal() {
 
 // Carousel
 
-let currentSlide = 0;
-const itemsPerPage = 1;
+document.addEventListener('DOMContentLoaded', function () {
+    const carousels = document.querySelectorAll('.carousel-container');
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel .skill');
+    carousels.forEach(carousel => {
+        const items = carousel.querySelectorAll('.skill').length;
+        if (items > 3) {
+            carousel.classList.remove('centered-carousel');
+        } else {
+            carousel.classList.add('centered-carousel');
+        }
+    });
+
+    showSlide(0, 'software-tools-carousel');  // Initialize the software tools carousel
+    
+});
+
+function showSlide(index, carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const slides = carousel.querySelectorAll('.carousel .skill');
     const totalSlides = Math.ceil(slides.length / 3);
 
     if (index >= totalSlides) {
@@ -106,19 +200,17 @@ function showSlide(index) {
         currentSlide = index;
     }
 
-    const offset = -currentSlide * 100 / itemsPerPage;
-    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+    const offset = -currentSlide * 100;
+    carousel.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
 }
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
+function nextSlide(carouselId) {
+    showSlide(currentSlide + 1, carouselId);
 }
 
-function prevSlide() {
-    showSlide(currentSlide - 1);
+function prevSlide(carouselId) {
+    showSlide(currentSlide - 1, carouselId);
 }
-
-showSlide(currentSlide);
 
 // Formspree
 

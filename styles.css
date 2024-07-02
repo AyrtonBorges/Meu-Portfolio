@@ -401,6 +401,12 @@ section h2 {
     color: #e63946;
 }
 
+section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e63946;
+}
+
 #about p,
 #skills .skills-container,
 #projects .project-gallery,
@@ -565,6 +571,15 @@ section h2 {
     right: 0;
 }
 
+.centered-carousel .carousel {
+  justify-content: center;
+}
+
+.centered-carousel .carousel-button {
+  display: none;
+}
+
+
 /* Modal Styles */
 .modal {
   display: none; 
@@ -615,7 +630,7 @@ section h2 {
     justify-content: center;
 }
 
-.project-item {
+/* .project-item {
     background-color: #2e2e2e;
     padding: 20px;
     border: 1px solid #444;
@@ -635,6 +650,79 @@ section h2 {
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
+} */
+
+.card {
+  position: relative;
+  width: 350px;
+  aspect-ratio: 16/9;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f7f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 10px;
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.secondary {
+  background: transparent;
+  color: #777;
+  border: 1px solid #777;
 }
 
 .pr-btn {
@@ -669,11 +757,12 @@ section h2 {
     text-decoration: none; /* Adiciona essa linha para remover a sublinhado */
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 15px;
     background-color: #e63946;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: none;
   }
   
 .pr-btn span {
@@ -787,3 +876,89 @@ footer .social-links a {
 footer .social-links a:hover {
     color: #e63946;
 }
+
+/* 
+.card {
+  position: relative;
+  transition-duration: 300ms;
+  transform: rotate3d(1, -1, 1, 60deg);
+  border: 4px solid #0c4a6e;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  height: 13rem;
+  width: 18rem;
+  background-color: #0369a1;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card:hover {
+  transform: rotate3d(0, 0, 0, 0deg);
+}
+
+.text-content {
+  color: #f3f4f6;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+}
+
+.download-btn {
+  transition-duration: 300ms;
+  border: 1px solid transparent;
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #0369a1;
+  padding: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  width: 170px;
+}
+
+.download-btn:hover {
+  background-color: #0c4a6e;
+  color: #f3f4f6;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+.svg-1,
+.svg-2 {
+  position: absolute;
+  transition-duration: 200ms, 500ms;
+  bottom: -0.125rem;
+  right: -5rem;
+  width: 12rem;
+  height: 12rem;
+  z-index: 10;
+  margin-top: -0.5rem;
+  fill: #f3f4f6;
+}
+
+.svg-1 {
+  stroke: #0c4a6e;
+  stroke-width: 5;
+}
+
+.svg-2 {
+  stroke: #0369a1;
+  stroke-width: 2;
+}
+
+.card:hover .svg-1,
+.card:hover .svg-2 {
+  transform: scale(1.25);
+} */
