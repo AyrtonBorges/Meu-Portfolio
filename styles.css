@@ -527,7 +527,7 @@ section h3 {
   left: 50%;
   margin-bottom: 30%;
   transform: translateX(-50%);
-  background-color: #e6394733;
+  background-color: #e63947;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
@@ -555,12 +555,27 @@ section h3 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(182, 14, 14);
     border: none;
-    padding: 10px;
+    padding: 15px;
+    font-size: 35px;
     cursor: pointer;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.carousel-container:hover .carousel-button {
+  opacity: 1; /* Torna visível ao passar o mouse sobre o carrossel */
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Torna o fundo mais visível ao passar o mouse */
+  color: rgb(255, 255, 255); /* Altera a cor do texto ao passar o mouse */
 }
 
 .carousel-button.prev {
