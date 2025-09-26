@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,14 @@
     <link rel="icon" href="../../src/icon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <meta property="og:title" content="Meu Portfólio">
     <meta property="og:description" content="Deixa-me explicar quem eu sou!">
     <meta property="og:image" content="https://raw.githubusercontent.com/AyrtonBorges/Meu-Portfolio/main/src/pagina.png">
     <meta property="og:url" content="https://ayrtonborges.github.io/Meu-Portfolio/">
     <meta property="og:type" content="website">
 </head>
+
 <body>
     <header>
         <div class="logo">Meu Portfólio</div>
@@ -26,88 +29,190 @@
             </ul>
         </nav>
     </header>
-    
-    <!-- <section id="project-details">
+
+    <section id="main-title">
+        <div class="container">
+            <h1>Sistema de Gerenciamento PQFL</h1>
+            <p>Um breve resumo sobre o software para controle de qualidade do leite</p>
+        </div>
+    </section>
+
+    <section id="project-introduction">
         <div class="project-intro">
-            <h1>Sistema PQFL</h1>
-            <p>Esse projeto está sendo feito por uma equipe</p>
+            <h2>Introdução</h2>
+            <p>Este projeto tem como objetivo desenvolver um software para o gerenciamento do Plano de Qualificação de
+                Fornecedores de Leite (PQFL), em conformidade com as exigências das Instruções Normativas 76 e 77 de
+                2018 do Ministério da Agricultura, Pecuária e Abastecimento (MAPA). O software está sendo desenvolvido
+                por uma pequena equipe de 7 integrantes, composta por alunos e professores do Instituto Federal
+                Fluminense (IFF) – Campus Bom Jesus do Itabapoana em parceria com um laticínio local, para coleta de
+                informações para o software. O projeto é financiado por meio de bolsas do Conselho Nacional de
+                Desenvolvimento Científico e Tecnológico (CNPq) e da Fundação Carlos Chagas Filho de Amparo à Pesquisa
+                do Estado do Rio de Janeiro (Faperj).</p>
+            <p>A iniciativa visa automatizar processos essenciais no controle de qualidade do leite, como a gestão de
+                visitas técnicas, avaliação de fornecedores, monitoramento de dados laboratoriais e conformidade
+                regulatória. Através dessa automação, espera-se aumentar a eficiência operacional, garantindo a
+                segurança e a qualidade dos produtos lácteos.</p>
         </div>
-        <div class="project-image">
-            <img src="src/projeto1.png" alt="Projeto 1">
+    </section>
+
+    <section id="project-introduction">
+        <div class="project-intro">
+            <h2>Versão Mobile</h2>
+            <p>Além da versão desktop, o projeto também conta com um aplicativo desenvolvido em 
+                <strong>React Native</strong>, totalmente integrado à <strong>API Laravel 12</strong>. 
+                O objetivo do app é fornecer aos técnicos uma ferramenta prática e portátil para 
+                registrar as anotações de relatórios durante as visitas técnicas em campo. </p>
+            <p>Essas informações são sincronizadas automaticamente com o sistema principal, 
+                garantindo que os dados coletados sejam armazenados de forma segura e imediata, 
+                permitindo maior agilidade na tomada de decisão e no acompanhamento dos fornecedores.</p>
+            <div class="project-images2">
+                <img src="src/app_mobile.png" alt="Tela do aplicativo mobile em React Native" onclick="openModal(this.src)">
+            </div>
         </div>
+    </section>
+
+    <section id="project-introduction">
+        <h2>Algumas Fotos Relacionadas ao Projeto</h2>
+        <p>
+            As fotos a seguir registram as reuniões semanais de nossa equipe, que inicialmente era composta por 5
+            pessoas. Com o progresso do projeto, a necessidade de mais colaboradores foi identificada, ampliando a
+            equipe para atender às demandas crescentes. A segunda imagem mostra uma reunião com o laticínio local,
+            realizada para a entrega do primeiro Mínimo Produto Viável (MVP). Esse marco foi alcançado após um ano
+            de trabalho, desde a fase de coleta de requisitos até o desenvolvimento, homologação e testes do
+            software.</p>
+    </section>
+    <div class="project-images">
+        <img src="src/reuniaosemanal.png" alt="Reunião semanal com primeira integrantes da equipe"
+            onclick="openModal(this.src)">
+        <img src="src/foto1.jpg" alt="Foto com a equipe do laticínio local" onclick="openModal(this.src)">
+        <img src="src/foto2.jpg" alt="Foto com a equipe do laticínio local" onclick="openModal(this.src)">
+    </div>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <section id="project-features">
+        <div class="project-features">
+            <h2>Objetivo</h2>
+            <p>O objetivo geral deste projeto é desenvolver um software desktop especializado para o gerenciamento
+                completo do Plano de Qualificação de Fornecedores de Leite (PQFL), com foco na automação e otimização
+                dos processos de controle de qualidade e conformidade dos fornecedores de leite. O sistema está sendo
+                projetado para atender às exigências das Instruções Normativas 76 e 77 de 2018 do Ministério da
+                Agricultura, Pecuária e Abastecimento (MAPA), proporcionando uma solução eficiente para o acompanhamento
+                e registro de visitas técnicas, análise de dados laboratoriais e gerenciamento de produtores, tanques e
+                suas propriedades.</p>
+            <p>O software terá como função principal facilitar a coleta e análise de dados críticos relacionados à
+                qualidade do leite, permitindo a geração automática de relatórios, gráficos e notificações para apoiar a
+                tomada de decisões por parte dos gestores. Além disso, ele será capaz de identificar possíveis não
+                conformidades, como níveis elevados de CPP (Contagem Padrão em Placas), sugerindo medidas corretivas, e
+                permitindo um monitoramento contínuo e eficaz da produção.</p>
+            <p>Esse sistema buscará não só cumprir os requisitos regulatórios, mas também aumentar a eficiência
+                operacional de laticínios e cooperativas ao centralizar todas as informações necessárias para a
+                avaliação de fornecedores em uma única plataforma, simplificando o processo de gerenciamento e
+                promovendo a melhoria contínua da qualidade do leite ao longo da cadeia produtiva.</p>
+        </div>
+    </section>
+
+    <section id="project-methodology">
+        <div class="project-methodology">
+            <h2>Metodologia</h2>
+            <p>O desenvolvimento do software de gerenciamento do Plano de Qualificação de Fornecedores de Leite (PQFL)
+                está sendo conduzido com base na metodologia ágil <strong>Scrumban</strong>, que combina elementos das
+                metodologias Scrum e Kanban ( tudo aplicado no Notion para melhor gerenciamento). Essa abordagem foi
+                escolhida por sua flexibilidade e eficiência na gestão de projetos, permitindo a adaptação contínua do
+                desenvolvimento às necessidades específicas do cliente e do mercado. A seguir, detalho as principais
+                etapas e práticas adotadas no processo de desenvolvimento:</p>
+            <ul>
+                <li><strong>Levantamento de Requisitos:</strong> Identificação das necessidades da cooperativa através
+                    de entrevistas e questionários.</li>
+                <li><strong>Design e Prototipagem:</strong> Criação de fluxogramas e protótipos de tela com ferramentas
+                    como LucidChart®.</li>
+                <li><strong>Desenvolvimento:</strong> Implementação do sistema conforme os protótipos e ajustes
+                    contínuos na base de dados.</li>
+                <li><strong>Testes e Validação:</strong> Realização de testes de usabilidade e performance, com feedback
+                    contínuo da equipe.</li>
+                <li><strong>Documentação e Entrega:</strong> Elaboração de documentação técnica e entrega final, com
+                    registro no INPI.</li>
+            </ul>
+            <h2>Exemplos de Aplicação das Metodologias</h2>
+        </div>
+    </section>
+
+    <div class="project-images2">
+        <img src="src/notion.png" alt="Lista de tarefas do Notion" onclick="openModal(this.src)">
+        <img src="src/notion2.png" alt="Sprints do Projeto no Notion" onclick="openModal(this.src)">
+    </div>
+
+    <section id="project-architecture">
+        <div class="project-architecture">
+            <h2>Arquitetura do Sistema</h2>
+            <p>O Sistema PQFL foi construído utilizando uma arquitetura baseada em microserviços. Cada componente do
+                sistema, desde o frontend até o backend, trabalha em conjunto para oferecer uma experiência rápida e
+                eficiente:</p>
+            <ul>
+                <li><strong>Frontend:</strong> O JFrame foi utilizado para a criação das interfaces gráficas, com o
+                    auxílio do WindowBuilder para agilizar e facilitar o desenvolvimento das telas de forma visual.
+                </li>
+                <li><strong>Backend:</strong> O backend foi desenvolvido utilizando Java, oferecendo robustez e
+                    segurança para o processamento de dados e regras de negócio.</li>
+                <li><strong>Banco de Dados:</strong> O MySQL Server foi adotado como sistema de gerenciamento de
+                    banco de dados, com o suporte do MySQL Workbench para simplificar a modelagem e gerenciamento
+                    das estruturas de dados.</li>
+            </ul>
+            <h2>Tela do projeto</h2>
+        </div>
+    </section>
+
+    <div class="project-images2">
+        <img src="src/projeto.png" alt="Lista de tarefas do Notion" onclick="openModal(this.src)">
+    </div>
+
+    <section id="project-details">
         <div class="project-info">
             <h2>Tecnologias Utilizadas</h2>
             <ul>
                 <li>
-                    <strong>HTML5:</strong> Utilizado para criar a estrutura semântica da página, garantindo uma melhor acessibilidade e SEO.
+                    <strong>Java:</strong> Linguagem de programação principal utilizada para o desenvolvimento do
+                    software desktop.
                 </li>
                 <li>
-                    <strong>CSS3:</strong> Utilizado para estilizar a página, garantindo um design responsivo e atraente.
+                    <strong>Eclipse IDE:</strong> Ambiente de desenvolvimento integrado (IDE) utilizado para programar o
+                    sistema em Java.
                 </li>
                 <li>
-                    <strong>JavaScript:</strong> Utilizado para adicionar interatividade à página, permitindo uma experiência de usuário dinâmica.
+                    <strong>SQL Server:</strong> Utilizado para a inicialização e administração do banco de dados,
+                    garantindo o armazenamento e processamento eficiente das informações.
                 </li>
                 <li>
-                    <strong>React:</strong> Utilizado para construir a interface de usuário de forma eficiente, compondo componentes reutilizáveis.
+                    <strong>SQL Workbench:</strong> Ferramenta usada para modelagem e gerenciamento do banco de dados
+                    SQL, essencial para armazenar e organizar os dados do sistema.
                 </li>
                 <li>
-                    <strong>Node.js:</strong> Utilizado para construir o backend do projeto, permitindo a execução do JavaScript no servidor.
+                    <strong>WindowBuilder:</strong> Ferramenta integrada ao Eclipse, utilizada para criar e editar
+                    interfaces gráficas (GUI) de forma visual e simplificada.
                 </li>
                 <li>
-                    <strong>Express.js:</strong> Um framework para Node.js que facilita a criação de APIs robustas e escaláveis.
+                    <strong>Visual Studio Code:</strong> Editor de código leve e versátil utilizado para edição de
+                    scripts e arquivos auxiliares do projeto.
                 </li>
                 <li>
-                    <strong>MongoDB:</strong> Utilizado como banco de dados NoSQL para armazenar dados de forma flexível e escalável.
+                    <strong>Notion:</strong> Ferramenta usada para a gestão de processos, organização de documentos e
+                    acompanhamento do progresso do projeto.
                 </li>
                 <li>
-                    <strong>Docker:</strong> Utilizado para containerizar a aplicação, garantindo consistência e facilidade de deploy.
+                    <strong>GitHub:</strong> Plataforma utilizada para controle de versão e repositório de código,
+                    permitindo colaboração eficiente e rastreamento de mudanças.
                 </li>
                 <li>
-                    <strong>Git & GitHub:</strong> Utilizado para controle de versão e colaboração, facilitando o gerenciamento do código fonte.
+                    <strong>LucidChart:</strong> Utilizado para criar fluxogramas e diagramas, ajudando no design e
+                    prototipagem do sistema.
                 </li>
             </ul>
         </div>
-        <div class="project-link">
-            <a href="https://github.com/seu-usuario/projeto1" target="_blank" class="btn">Ver no GitHub</a>
-        </div>
-    </section> -->
+    </section>
 
-    <div class="gearbox">
-        <div class="overlay"></div>
-        <div class="gear one">
-            <div class="gear-inner">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-        <div class="gear two">
-            <div class="gear-inner">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-        <div class="gear three">
-            <div class="gear-inner">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-        <div class="gear four large">
-            <div class="gear-inner">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-        <h1> Em produção... </h1>
-    </div>
-    
     <footer>
         <div class="social-links">
             <a href="https://github.com/ayrtonborges" target="_blank"><i class="fab fa-github"></i></a>
@@ -119,4 +224,3 @@
 
     <script src="script.js"></script>
 </body>
-</html>

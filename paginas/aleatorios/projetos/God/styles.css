@@ -15,8 +15,19 @@ body {
   color: #e0e0e0;
 }
 
+main {
+  flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%; /* Garante que a página ocupe toda a altura do navegador */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Cabeçalho */
@@ -32,7 +43,7 @@ header {
 header .logo {
   font-size: 1.5em;
   font-weight: bold;
-  color: #e63946;
+  color: #FFEB0C;
 }
 
 header nav ul {
@@ -55,7 +66,7 @@ header nav ul li {
   --btn-animation-duration: 1.2s;
   --btn-shadow-color: rgba(0, 0, 0, 0.137);
   --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
-  --hover-btn-color: #e63946;
+  --hover-btn-color: #FFEB0C;
   --default-btn-color: #fff;
   --font-size: 16px;
   --font-weight: 600;
@@ -203,7 +214,7 @@ header nav ul li {
 /* Seção de detalhes do projeto */
 
 #main-title {
-  padding: 20px 0;
+  padding: 1px 0;
   text-align: center;
   background-color: #2e2e2e;
   color: white;
@@ -211,7 +222,7 @@ header nav ul li {
 
 #main-title h1 {
   font-size: 3em;
-  color: #e63946;
+  color: #fbff00;
   margin-bottom: 10px;
 }
 
@@ -242,7 +253,7 @@ header nav ul li {
 #project-features h2,
 #project-methodology h2,
 #project-results h2 {
-  color: #e63946;
+  color: #FFEB0C;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -253,7 +264,7 @@ header nav ul li {
 #project-features h3,
 #project-methodology h3,
 #project-results h3 {
-  color: #e63946;
+  color: #FFEB0C;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -278,6 +289,16 @@ header nav ul li {
   border-radius: 5px;
 }
 
+#formula-text {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20px;
+  word-wrap: break-word; /* Garante que as palavras sejam quebradas quando necessário */
+  max-width: 1300px; /* Define a largura máxima para forçar a quebra de linha */
+  margin: 20px auto; /* Centraliza o texto horizontalmente */
+}
+
+
 /* Fotos */
 
 .project-images {
@@ -291,7 +312,7 @@ header nav ul li {
   width: 20%;
   max-width: 300px;
   border-radius: 10px;
-  border: 2px solid #e63946;
+  border: 2px solid #FFEB0C;
   cursor: pointer;
   min-width: 130px;
 }
@@ -307,7 +328,7 @@ header nav ul li {
   width: 25%;
   max-width: 300px;
   border-radius: 10px;
-  border: 2px solid #e63946;
+  border: 2px solid #FFEB0C;
   cursor: pointer;
   min-width: 130px;
 }
@@ -376,6 +397,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+  flex-shrink: 0;
 }
 
 footer .social-links {
@@ -389,7 +411,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  color: #e63946;
+  color: #FFEB0C;
 }
 
 @media (max-width: 768px) {
@@ -446,4 +468,11 @@ footer .social-links a:hover {
   .card {
     padding: 10px;
   }
+}
+
+
+canvas {
+    margin-top: 20px;
+    background-color: transparent;
+    /* Deixa o fundo do canvas transparente */
 }
