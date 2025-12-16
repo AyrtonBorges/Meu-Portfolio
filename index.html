@@ -4,440 +4,464 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="src/icon.png">
-    <title>Meu Portfólio</title>
+    <title>Meu Portfólio | Ayrton Borges</title>
+
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <meta property="og:title" content="Meu Portfólio">
+    <meta property="og:title" content="Meu Portfólio | Ayrton Borges">
     <meta property="og:description" content="Deixa-me explicar quem eu sou!">
     <meta property="og:image" content="https://raw.githubusercontent.com/AyrtonBorges/Meu-Portfolio/main/src/pagina.png">
     <meta property="og:url" content="https://ayrtonborges.github.io/Meu-Portfolio/">
     <meta property="og:type" content="website">
 </head>
-<body>
-    <header>
-        <div class="logo">Meu Portfólio</div>
-        <nav>
-            <ul>
-                <li><a href="#home" class="ui-btn"><span>Home</span></a></li>
-                <li><a href="#about" class="ui-btn"><span>Sobre</span></a></li>
-                <li><a href="#skills" class="ui-btn"><span>Habilidades</span></a></li>
-                <li><a href="#projects" class="ui-btn"><span>Projetos</span></a></li>
-                <li><a href="#contact" class="ui-btn"><span>Contato</span></a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <div class="intro">
-            <div class="intro-text">
-                <h1>Bem-vindo ao Meu Portfólio</h1>
-                <p>Olá! Eu sou <b>Ayrton Borges</b>, um desenvolvedor apaixonado em criar soluções incríveis.</p>
-                <a href="#projects" class="ui-btn"><span> Veja meus projetos</span> </a>
-            </div>
-            <div class="intro-image">
-                <img src="src/eu.png" alt="Foto de Ayrton Borges">
-            </div>
-        </div>
-    </section>
-    
-    <!-- Sobre Mim -->
+<body data-root="./" data-active-nav="home">
+    <header class="site-header" data-component="navbar"></header>
 
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <p>Bem-vindo ao meu espaço de Portfólio! Me chamo <b>Ayrton Borges</b> sou um desenvolvedor full-stack formado em Técnico em Informática e atualmente cursando Engenharia de Computação. Tenho experiência em tecnologias como HTML, CSS, JavaScript, React, Node.js e muito mais. Minha paixão é resolver problemas complexos e criar aplicações web intuitivas e eficientes. <br> <br>
+    <main>
+        <section id="home">
+            <div class="container">
+                <div class="intro surface hero-grid">
+                    <div class="intro-text">
+                        <p class="eyebrow">Full-stack • Bots • IoT</p>
+                        <h1>Bem-vindo ao meu portfólio</h1>
+                        <p>Olá! Eu sou <strong>Ayrton Borges</strong>, desenvolvedor apaixonado por criar soluções úteis:
+                            de sistemas de gestão e bots a integrações com hardware.</p>
+                        <div class="cta-row">
+                            <a class="pill" href="#projects">
+                                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                                <span>Veja meus projetos</span>
+                            </a>
+                            <a class="ghost-btn" href="#contact">
+                                <span>Vamos conversar</span>
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="hero-tags">
+                            <span class="badge">Back-end Java & Node</span>
+                            <span class="badge">React & Next.js</span>
+                            <span class="badge">Automação e Bots</span>
+                        </div>
+                    </div>
+                    <div class="intro-image">
+                        <div class="image-frame">
+                            <img src="src/eu.png" alt="Foto de Ayrton Borges">
+                        </div>
+                        <div class="status-card surface">
+                            <p class="status-title">Em construção contínua</p>
+                            <p class="status-meta">Projetos acadêmicos e pessoais documentados aqui.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            Atualmente, estou trabalhando em um projeto de sistema de gerenciamento de PQFL (Plano de Qualificação de Fornecedores de Leite) em parceria com um laticínio local. Embora minha especialidade seja o back-end, também gosto de trabalhar no front-end de vez em quando, garantindo que as aplicações que desenvolvo sejam funcionais e ofereçam a melhor experiência possível para o usuário final. <br> <br>
-            
-            Além do desenvolvimento web, tenho interesse em diversas outras áreas. Trabalho com aplicações desktop, eletrônica (Arduino, ESP32) e criação de bots para plataformas como Telegram, WhatsApp, Instagram e Twitter. Sou autodidata e sempre motivado a aprender novas habilidades e explorar diferentes campos por conta própria.<br>
-        </p>
-        <!-- <div class="about-images">
-            <img src="" alt="Imagem sobre mim 1" onclick="openModal(this.src)">
-            <img src="" alt="Imagem sobre mim 2" onclick="openModal(this.src)">
-            <img src="" alt="Imagem sobre mim 3" onclick="openModal(this.src)">
-        </div> -->
-        <h2>Minha filosofia</h2>
-        <p>
-            Acredito fielmente na filosofia que tudo na programação é possível, mesmo que não exista tecnologia para isso, assim como disse <b>Marcos Aurélio</b>, "Se você mesmo não consegue, com o seu esforço, realizar algo, não pense que isso é impossível ao ser humano; 
-            se, entretanto, algo é possível ao ser humano e lhe é próprio, pense que isso também lhe é acessível." (Meditações, 6, 19).
-        </p>
-    </section>
+        <section id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Sobre Mim</h2>
+                    <p>Um pouco da minha trajetória e filosofia</p>
+                </div>
+                <div class="about-grid">
+                    <div class="surface about-card">
+                        <div class="about-header">
+                            <span class="about-chip">Full-stack</span>
+                            <span class="about-chip">Bots & IoT</span>
+                        </div>
+                        <p>Bem-vindo ao meu espaço de portfólio! Sou <strong>Ayrton Borges</strong>, desenvolvedor full-stack,
+                            formado em Técnico em Informática e cursando Engenharia de Computação. Experiência em HTML, CSS,
+                            JavaScript, React, Node.js e bancos de dados. Gosto de resolver problemas complexos e criar
+                            aplicações intuitivas e eficientes.</p>
+                        <p>Hoje trabalho no sistema de gerenciamento PQFL (Plano de Qualificação de Fornecedores de Leite) para
+                            um laticínio parceiro. Especialidade em back-end, participando também do front-end para garantir
+                            experiência completa.</p>
+                        <ul class="about-points">
+                            <li><i class="fa-solid fa-rocket"></i> Produtos digitais end-to-end: da arquitetura à entrega.</li>
+                            <li><i class="fa-solid fa-robot"></i> Automações e bots para mensageria e integrações.</li>
+                            <li><i class="fa-solid fa-microchip"></i> Conexão com hardware (Arduino/ESP32) quando precisa sair da tela.</li>
+                        </ul>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">7+</span>
+                                <span class="stat-label">pessoas no time PQFL</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">áreas: web, bots, IoT</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">curiosidade para aprender</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="surface about-card philosophy">
+                        <h3>Minha filosofia</h3>
+                        <p>Acredito que tudo na programação é possível. Como disse Marco Aurélio: "Se você mesmo não consegue,
+                            com o seu esforço, realizar algo, não pense que isso é impossível ao ser humano; se, entretanto, algo é
+                            possível ao ser humano e lhe é próprio, pense que isso também lhe é acessível."</p>
+                        <div class="about-tags">
+                            <span class="badge">Desktop</span>
+                            <span class="badge">Eletrônica</span>
+                            <span class="badge">APIs</span>
+                            <span class="badge">Automação</span>
+                        </div>
+                        <div class="about-quote">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div>
+                                <p class="quote-text">"Se parece difícil, eu quebro em partes. Se não existe, eu prototipo com o que tenho."</p>
+                                <p class="quote-meta">Foco em entregar valor rápido, depois refinar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Habilidades</h2>
+                    <p>Ferramentas e stacks que uso para entregar valor</p>
+                </div>
+
+                <h3 class="subheading">Linguagens de programação</h3>
+                <div class="carousel-container centered-carousel" id="programming-carousel">
+                    <button class="carousel-button prev" onclick="prevSlide('programming-carousel')" aria-label="Anterior">&#10094;</button>
+                    <div class="carousel">
+                        <div class="skill" onclick="openSkillModal('html5')">
+                            <div class="skill-content">
+                                <i class="fab fa-html5"></i>
+                                <h3>HTML5</h3>
+                                <p>Estruturas semânticas e acessíveis para a web.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('css3')">
+                            <div class="skill-content">
+                                <i class="fab fa-css3-alt"></i>
+                                <h3>CSS3</h3>
+                                <p>Estilos modernos, grids responsivos e animações.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('javascript')">
+                            <div class="skill-content">
+                                <i class="fab fa-js-square"></i>
+                                <h3>JavaScript</h3>
+                                <p>Interatividade e integrações com APIs.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('react')">
+                            <div class="skill-content">
+                                <i class="fab fa-react"></i>
+                                <h3>React</h3>
+                                <p>Componentização, hooks e UIs modernas.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('nodejs')">
+                            <div class="skill-content">
+                                <i class="fab fa-node-js"></i>
+                                <h3>Node.js</h3>
+                                <p>APIs rápidas e escaláveis com Express.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('python')">
+                            <div class="skill-content">
+                                <i class="fab fa-python"></i>
+                                <h3>Python</h3>
+                                <p>Automação, análise de dados e integrações.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('java')">
+                            <div class="skill-content">
+                                <i class="fab fa-java"></i>
+                                <h3>Java</h3>
+                                <p>Aplicações robustas e desktop.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('typescript')">
+                            <div class="skill-content">
+                                <i class="fab fa-js-square"></i>
+                                <h3>TypeScript</h3>
+                                <p>Base sólida para apps Next.js.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('nextjs')">
+                            <div class="skill-content">
+                                <i class="fab fa-react"></i>
+                                <h3>Next.js</h3>
+                                <p>SSR, rotas dinâmicas e performance.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('sql')">
+                            <div class="skill-content">
+                                <i class="fas fa-database"></i>
+                                <h3>SQL</h3>
+                                <p>Consultas, modelagem e otimização.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button next" onclick="nextSlide('programming-carousel')" aria-label="Próximo">&#10095;</button>
+                </div>
+
+                <h3 class="subheading">Gerenciamento de projetos</h3>
+                <div class="carousel-container centered-carousel" id="project-management-carousel">
+                    <button class="carousel-button prev" onclick="prevSlide('project-management-carousel')" aria-label="Anterior">&#10094;</button>
+                    <div class="carousel">
+                        <div class="skill" onclick="openSkillModal('trello')">
+                            <div class="skill-content">
+                                <i class="fab fa-trello"></i>
+                                <h3>Trello</h3>
+                                <p>Quadros visuais e organização colaborativa.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('jira')">
+                            <div class="skill-content">
+                                <i class="fab fa-jira"></i>
+                                <h3>Jira</h3>
+                                <p>Planejamento ágil, épicos e sprints.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('lucidapp')">
+                            <div class="skill-content">
+                                <i class="fas fa-project-diagram"></i>
+                                <h3>Lucid.app</h3>
+                                <p>Mapeamento visual de processos.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('modelio')">
+                            <div class="skill-content">
+                                <i class="fas fa-drafting-compass"></i>
+                                <h3>Modelio</h3>
+                                <p>Modelagem UML e documentação.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button next" onclick="nextSlide('project-management-carousel')" aria-label="Próximo">&#10095;</button>
+                </div>
+
+                <h3 class="subheading">Ferramentas de desenvolvimento</h3>
+                <div class="carousel-container centered-carousel" id="software-tools-carousel">
+                    <button class="carousel-button prev" onclick="prevSlide('software-tools-carousel')" aria-label="Anterior">&#10094;</button>
+                    <div class="carousel">
+                        <div class="skill" onclick="openSkillModal('docker')">
+                            <div class="skill-content">
+                                <i class="fab fa-docker"></i>
+                                <h3>Docker</h3>
+                                <p>Ambientes reproduzíveis e portáveis.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('vscode')">
+                            <div class="skill-content">
+                                <i class="fas fa-code"></i>
+                                <h3>VS Code</h3>
+                                <p>Editor leve e extensível.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('github')">
+                            <div class="skill-content">
+                                <i class="fab fa-github"></i>
+                                <h3>GitHub</h3>
+                                <p>Versionamento e colaboração.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('jenkins')">
+                            <div class="skill-content">
+                                <i class="fas fa-tools"></i>
+                                <h3>Jenkins</h3>
+                                <p>Integração e entrega contínua.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('git')">
+                            <div class="skill-content">
+                                <i class="fab fa-git-alt"></i>
+                                <h3>Git</h3>
+                                <p>Fluxos de branch e code review.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('eclipse')">
+                            <div class="skill-content">
+                                <i class="fas fa-laptop-code"></i>
+                                <h3>Eclipse</h3>
+                                <p>IDE para projetos Java.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('netbeans')">
+                            <div class="skill-content">
+                                <i class="fas fa-code-branch"></i>
+                                <h3>NetBeans</h3>
+                                <p>IDE para desktop e mobile.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('pycharm')">
+                            <div class="skill-content">
+                                <i class="fa-brands fa-python"></i>
+                                <h3>PyCharm</h3>
+                                <p>Produtividade em Python.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('platformio')">
+                            <div class="skill-content">
+                                <i class="fas fa-microchip"></i>
+                                <h3>Platform.io</h3>
+                                <p>Plataforma para IoT.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('postman')">
+                            <div class="skill-content">
+                                <i class="fas fa-server"></i>
+                                <h3>Postman</h3>
+                                <p>Testes e documentação de APIs.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('springtools')">
+                            <div class="skill-content">
+                                <i class="fas fa-leaf"></i>
+                                <h3>Spring Tools 4</h3>
+                                <p>Stack Spring para Java.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button next" onclick="nextSlide('software-tools-carousel')" aria-label="Próximo">&#10095;</button>
+                </div>
+
+                <h3 class="subheading">Design e gestão de dados</h3>
+                <div class="carousel-container centered-carousel" id="design-tools-carousel">
+                    <button class="carousel-button prev" onclick="prevSlide('design-tools-carousel')" aria-label="Anterior">&#10094;</button>
+                    <div class="carousel">
+                        <div class="skill" onclick="openSkillModal('canva')">
+                            <div class="skill-content">
+                                <i class="fa-solid fa-pen-nib"></i>
+                                <h3>Canva</h3>
+                                <p>Design rápido e apresentações.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('figma')">
+                            <div class="skill-content">
+                                <i class="fab fa-figma"></i>
+                                <h3>Figma</h3>
+                                <p>Protótipos e design colaborativo.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('mysqlworkbench')">
+                            <div class="skill-content">
+                                <i class="fas fa-database"></i>
+                                <h3>MySQL Workbench</h3>
+                                <p>Modelagem e administração de dados.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('libreoffice')">
+                            <div class="skill-content">
+                                <i class="fas fa-file-alt"></i>
+                                <h3>LibreOffice</h3>
+                                <p>Documentos e planilhas.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('googledrive')">
+                            <div class="skill-content">
+                                <i class="fab fa-google-drive"></i>
+                                <h3>Google Drive</h3>
+                                <p>Colaboração em tempo real.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('slack')">
+                            <div class="skill-content">
+                                <i class="fab fa-slack"></i>
+                                <h3>Slack</h3>
+                                <p>Comunicação de equipes.</p>
+                            </div>
+                        </div>
+                        <div class="skill" onclick="openSkillModal('notion')">
+                            <div class="skill-content">
+                                <i class="fas fa-tasks"></i>
+                                <h3>Notion</h3>
+                                <p>Documentação e gestão de conhecimento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button next" onclick="nextSlide('design-tools-carousel')" aria-label="Próximo">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Meus Projetos</h2>
+                    <p>Alguns trabalhos que estão em destaque</p>
+                </div>
+                <div class="project-gallery">
+                    <div class="card">
+                        <img src="src/pqfl.png" class="card__image" alt="Projeto PQFL">
+                        <div class="card__content">
+                            <p class="card__title">Sistema PQFL (em desenvolvimento)</p>
+                            <p class="card__description">Gestão do Plano de Qualificação de Fornecedores de Leite para
+                                laticínios, com aplicativo integrado para visitas técnicas.</p>
+                            <a href="paginas/pqfl/" class="pr-btn"><span>Ver mais</span></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="src/aleatorios.png" class="card__image" alt="Projetos diversos">
+                        <div class="card__content">
+                            <p class="card__title">Projetos Diversos</p>
+                            <p class="card__description">Coleção de experimentos e pequenos projetos que compartilho por aqui.</p>
+                            <a href="paginas/aleatorios/" class="pr-btn"><span>Ver mais</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Contato</h2>
+                    <p>Conte sobre sua ideia ou envie um oi</p>
+                </div>
+                <div class="contact-grid surface">
+                    <form action="https://formspree.io/f/mblrrwwl" method="post">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" placeholder="Como posso ajudar?" required></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <div class="contact-card">
+                        <h3>Vamos conversar</h3>
+                        <p>Curte projetos de automação, bots ou produtos digitais? Me manda uma mensagem.</p>
+                        <div class="social-links contact-links">
+                            <a href="https://instagram.com/ayrtoncborges" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a href="https://twitter.com/ayrtoncborges" target="_blank" rel="noreferrer"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="https://www.linkedin.com/in/ayrton-borges-620aa1168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
+        <span class="close" onclick="closeModal()" aria-label="Fechar modal">&times;</span>
+        <img class="modal-content" id="modalImage" alt="">
         <div id="caption"></div>
     </div>
-    
-    <!-- Minhas Habilidades -->
-    <section id="skills">
-        <h2>Habilidades</h2> 
-        
-        <h3>Linguagem de Programação</h3>
-        <div class="carousel-container centered-carousel" id="programming-carousel">
-            <button class="carousel-button prev" onclick="prevSlide('programming-carousel')">&#10094;</button>
-            <div class="carousel">
-                <div class="skill" onclick="openSkillModal('html5')">
-                    <div class="skill-content">
-                        <i class="fab fa-html5"></i>
-                        <h3>HTML5</h3>
-                        <p>Desenvolvimento de estruturas semânticas e acessíveis com HTML5.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('css3')">
-                    <div class="skill-content">
-                        <i class="fab fa-css3-alt"></i>
-                        <h3>CSS3</h3>
-                        <p>Estilização avançada utilizando CSS3 e preprocessadores.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('javascript')">
-                    <div class="skill-content">
-                        <i class="fab fa-js-square"></i>
-                        <h3>JavaScript</h3>
-                        <p>Criação de interatividade e funcionalidades dinâmicas com JavaScript.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('react')">
-                    <div class="skill-content">
-                        <i class="fab fa-react"></i>
-                        <h3>React</h3>
-                        <p>Conhecimento básico de interfaces de usuário modernas com React.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('nodejs')">
-                    <div class="skill-content">
-                        <i class="fab fa-node-js"></i>
-                        <h3>Node.js</h3>
-                        <p>Construção de servidores eficientes e escaláveis com Node.js.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('python')">
-                    <div class="skill-content">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
-                        <p>Programação avançada em Python para diversas aplicações.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('java')">
-                    <div class="skill-content">
-                        <i class="fab fa-java"></i>
-                        <h3>Java</h3>
-                        <p>Desenvolvimento de aplicações robustas e escaláveis com Java.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('typescript')">
-                    <div class="skill-content">
-                        <i class="fab fa-js-square"></i>
-                        <h3>TypeScript</h3>
-                        <p>Conhecimento básico sobre TypeScript para aplicações usando o framework Next.js.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('nextjs')">
-                    <div class="skill-content">
-                        <i class="fab fa-react"></i>
-                        <h3>Next.js</h3>
-                        <p>Framework React para aplicações web com server-side rendering (SSR) e estáticas.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('sql')">
-                    <div class="skill-content">
-                        <i class="fas fa-database"></i>
-                        <h3>SQL</h3>
-                        <p>Gerenciamento e manipulação de bancos de dados relacionais.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-button next" onclick="nextSlide('programming-carousel')">&#10095;</button>
-        </div>
-    
-        <h3>Gerenciamento de Projetos</h3>
-        <div class="carousel-container centered-carousel" id="project-management-carousel">
-            <button class="carousel-button prev" onclick="prevSlide('project-management-carousel')">&#10094;</button>
-            <div class="carousel">
-                <div class="skill" onclick="openSkillModal('trello')">
-                    <div class="skill-content">
-                        <i class="fab fa-trello"></i>
-                        <h3>Trello</h3>
-                        <p>Organização de tarefas e projetos em quadros virtuais.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('jira')">
-                    <div class="skill-content">
-                        <i class="fab fa-jira"></i>
-                        <h3>Jira</h3>
-                        <p>Gerenciamento de projetos com foco em desenvolvimento de software.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('lucidapp')">
-                    <div class="skill-content">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>Lucid.app</h3>
-                        <p>Plataforma de gerenciamento de projetos e colaboração para equipes, com recursos visuais e de planejamento.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('modelio')">
-                    <div class="skill-content">
-                        <i class="fas fa-drafting-compass"></i>
-                        <h3>Modelio</h3>
-                        <p>Ferramenta de modelagem e design para desenvolvimento de software.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-button next" onclick="nextSlide('project-management-carousel')">&#10095;</button>
-        </div>
 
-    
-        <h3>Ferramentas de Desenvolvimento de Software</h3>
-        <div class="carousel-container centered-carousel" id="software-tools-carousel">
-            <button class="carousel-button prev" onclick="prevSlide('software-tools-carousel')">&#10094;</button>
-            <div class="carousel">
-                <div class="skill" onclick="openSkillModal('docker')">
-                    <div class="skill-content">
-                        <i class="fab fa-docker"></i>
-                        <h3>Docker</h3>
-                        <p>Containerização de aplicações para garantir consistência e portabilidade.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('vscode')">
-                    <div class="skill-content">
-                        <i class="fas fa-code"></i>
-                        <h3>Visual Studio Code</h3>
-                        <p>Editor de código fonte gratuito e aberto.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('github')">
-                    <div class="skill-content">
-                        <i class="fab fa-github"></i>
-                        <h3>GitHub</h3>
-                        <p>Plataforma de hospedagem de código fonte e colaboração em projetos.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('jenkins')">
-                    <div class="skill-content">
-                        <i class="fas fa-tools"></i>
-                        <h3>Jenkins</h3>
-                        <p>Ferramenta de automação de integração contínua.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('git')">
-                    <div class="skill-content">
-                        <i class="fab fa-git-alt"></i>
-                        <h3>Git</h3>
-                        <p>Sistema de controle de versão distribuído para gerenciamento de código fonte.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('eclipse')">
-                    <div class="skill-content">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Eclipse</h3>
-                        <p>Ambiente de desenvolvimento integrado para diversas linguagens de programação.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('netbeans')">
-                    <div class="skill-content">
-                        <i class="fas fa-code-branch"></i>
-                        <h3>NetBeans</h3>
-                        <p>Ambiente de desenvolvimento integrado para Java.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('pycharm')">
-                    <div class="skill-content">
-                        <i class="fa-brands fa-python"></i>
-                        <h3>PyCharm</h3>
-                        <p>Ambiente de desenvolvimento integrado para Python.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('platformio')">
-                    <div class="skill-content">
-                        <i class="fas fa-microchip"></i>
-                        <h3>Platform.io</h3>
-                        <p>Plataforma de desenvolvimento integrado para Internet das Coisas (IoT).</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('postman')">
-                    <div class="skill-content">
-                        <i class="fas fa-server"></i>
-                        <h3>Postman</h3>
-                        <p>Plataforma de colaboração para desenvolvimento de APIs.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('springtools')">
-                    <div class="skill-content">
-                        <i class="fas fa-leaf"></i>
-                        <h3>Spring Tools 4</h3>
-                        <p>Conjunto de ferramentas para desenvolvimento com o framework Spring.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-button next" onclick="nextSlide('software-tools-carousel')">&#10095;</button>
-        </div>
-    
-        <h3>Design</h3>
-        <div class="carousel-container centered-carousel" id="design-tools-carousel">
-            <button class="carousel-button prev" onclick="prevSlide('design-tools-carousel')">&#10094;</button>
-            <div class="carousel">
-                <div class="skill" onclick="openSkillModal('canva')">
-                    <div class="skill-content">
-                        <i class="fa-solid fa-pen-nib"></i>
-                        <h3>Canva</h3>
-                        <p>Plataforma online para criação de designs e imagens.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('figma')">
-                    <div class="skill-content">
-                        <i class="fab fa-figma"></i>
-                        <h3>Figma</h3>
-                        <p>Criação de designs e prototipagem de interfaces de usuário.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('mysqlworkbench')">
-                    <div class="skill-content">
-                        <i class="fas fa-database"></i>
-                        <h3>MySQL Workbench</h3>
-                        <p>Ferramenta para modelagem, desenvolvimento e administração de bancos de dados MySQL.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-button next" onclick="nextSlide('design-tools-carousel')">&#10095;</button>
-        </div>
-
-    
-        <h3>Ferramentas de Gerenciamento de Dados e Comunicação</h3>
-        <div class="carousel-container centered-carousel" id="data-management-carousel">
-            <button class="carousel-button prev" onclick="prevSlide('data-management-carousel')">&#10094;</button>
-            <div class="carousel">
-                <div class="skill" onclick="openSkillModal('libreoffice')">
-                    <div class="skill-content">
-                        <i class="fas fa-file-alt"></i>
-                        <h3>LibreOffice</h3>
-                        <p>Suite de aplicativos para edição de textos, criação de planilhas e apresentações.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('googledrive')">
-                    <div class="skill-content">
-                        <i class="fab fa-google-drive"></i>
-                        <h3>Google Drive</h3>
-                        <p>Armazenamento e compartilhamento de arquivos online.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('slack')">
-                    <div class="skill-content">
-                        <i class="fab fa-slack"></i>
-                        <h3>Slack</h3>
-                        <p>Plataforma de comunicação para equipes.</p>
-                    </div>
-                </div>
-                <div class="skill" onclick="openSkillModal('notion')">
-                    <div class="skill-content">
-                        <i class="fas fa-tasks"></i>
-                        <h3>Notion</h3>
-                        <p>Plataforma que permite criar notas, banco de dados, listas de tarefas, entre outros recursos.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-button next" onclick="nextSlide('data-management-carousel')">&#10095;</button>
-        </div>
-    </section>
-    
-    
-    <!-- Mais detalhes -->
-    <div id="skillModal" class="modal">
-        <span class="close" onclick="closeSkillModal()">&times;</span>
+    <div id="skillModal" class="modal skill-modal">
+        <span class="close" onclick="closeSkillModal()" aria-label="Fechar modal">&times;</span>
         <div class="modal-content">
             <h2 id="skillTitle"></h2>
             <p id="skillDescription"></p>
         </div>
     </div>
-    
-    <section id="projects">
-        <h2>Meus Projetos</h2>
-        <div class="project-gallery">
-            <div class="card">
-                <img src="src/pqfl.png" class="card__image" alt="Projeto 1">
-                <div class="card__content">
-                    <p class="card__title">Sistema PQFL (Trabalhando)</p>
-                    <p class="card__description">Um sistema de gestão de Plano de Qualificação de Fornecedores de Leite, para Laticínios, 
-                                                 que está sendo criado uma aplicação Desktop usando a linguagem Java.</p>
-                    <a href="paginas/pqfl/" class="pr-btn"><span> Ver mais </span></a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="src/aleatorios.png" class="card__image" alt="Projeto 3">
-                <div class="card__content">
-                    <p class="card__title">Projetos Diversos</p>
-                    <p class="card__description"> Uma coleção de projetos variados que considero interessantes e que compartilho aqui.</p>
-                    <a href="paginas/aleatorios/" class="pr-btn"><span> Ver mais </span></a>
-                </div>
-            </div>
-            <!-- <div class="project-item">
-                <img src="src/pqfl.png" alt="Projeto 1">
-                <h3>Sistema PQFL (Trabalhando)</h3>
-                <p>Um sistema de gestão de Plano de Qualificação de Fornecedores de Leite, para Laticínios, que está sendo criado uma aplicação Desktop usando a linguagem Java.</p>
-                <a href="paginas/pqfl/" class="pr-btn"><span>Ver mais</span></a>
-            </div>
-            <div class="project-item">
-                <img src="src/bot.png" alt="Projeto 1">
-                <h3>Atlética Bot</h3>
-                <p>Um bot da Atlética usado gerir um evento de "Caça aos Peguins", nele foram implementados comandos de ajuda, mais anunciamento e coleta de informações para grupos do whatsapp.</p>
-                <a href="paginas/atleticabot/" class="pr-btn"><span>Ver mais</span></a>
-            </div> -->
-        </div>
-    </section>
-    
-    <!-- Contato -->
 
-    <section id="contact">
-        <h2>Contato</h2>
-        <!-- <div class="card">
-            <div class="text-content">
-                <span class="title">Jr</span>
-                <p class="subtitle">Frontend Developer</p>
-            </div>
-            <button class="download-btn">
-                Download CV
-                <svg y="0" xmlns="http://www.w3.org/2000/svg" x="0" width="100" viewBox="0 0 100 100"
-                    preserveAspectRatio="xMidYMid meet" height="100" class="icon">
-                    <path fill-rule="evenodd"
-                        d="M22.1,77.9a4,4,0,0,1,4-4H73.9a4,4,0,0,1,0,8H26.1A4,4,0,0,1,22.1,77.9ZM35.2,47.2a4,4,0,0,1,5.7,0L46,52.3V22.1a4,4,0,1,1,8,0V52.3l5.1-5.1a4,4,0,0,1,5.7,0,4,4,0,0,1,0,5.6l-12,12a3.9,3.9,0,0,1-5.6,0l-12-12A4,4,0,0,1,35.2,47.2Z">
-                    </path>
-                </svg>
-            </button>
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="svg-1">
-                <path stroke-width="5" stroke-miterlimit="10"
-                    d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z"
-                    data-name="layer1"></path>
-            </svg>
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="svg-2">
-                <path stroke-width="2" stroke-miterlimit="10"
-                    d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z"
-                    data-name="layer1"></path>
-            </svg>
-        </div> -->
-        <form action="https://formspree.io/f/mblrrwwl" method="post">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <div class="social-links contact-links">
-            <a href="https://instagram.com/ayrtoncborges" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://twitter.com/ayrtoncborges" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-            <a href="https://www.linkedin.com/in/ayrton-borges-620aa1168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/ayrtonborges" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/ayrton-borges-620aa1168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <!-- Adicione mais links conforme necessário -->
-        </div>
-        <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
-    </footer>
+    <footer data-component="footer"></footer>
 
-    <script src="script.js"></script>
+    <script src="components.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
