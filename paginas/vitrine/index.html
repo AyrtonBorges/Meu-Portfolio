@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine da Restauração — contribuições</title>
+    <link rel="icon" href="../../src/icon.png">
+    <link rel="stylesheet" href="../../shared.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <meta property="og:title" content="Vitrine da Restauração — contribuições">
+    <meta property="og:description" content="Evolução de UX, mapa interativo e pipeline de deploy do projeto Vitrine da Restauração.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AyrtonBorges/Meu-Portfolio/main/src/pagina.png">
+    <meta property="og:url" content="https://ayrtonborges.github.io/Meu-Portfolio/">
+    <meta property="og:type" content="website">
+</head>
+<body data-root="../.." data-active-nav="projects">
+    <header class="site-header" data-component="navbar"></header>
+
+    <main>
+        <section id="main-title">
+            <div class="container">
+                <h1>Vitrine da Restauração</h1>
+                <p>Contribuições em front-end, back-end e operação para um produto mais confiável e amigável.</p>
+            </div>
+        </section>
+
+        <section class="project-section surface">
+            <div class="container narrow intro-grid">
+                <div>
+                    <div class="pill soft">Projeto em produção</div>
+                    <h2>Panorama rápido</h2>
+                    <p>Atuei na evolução e manutenção do sistema Vitrine da Restauração, com foco em experiência do usuário, confiabilidade das rotinas principais e padronização do produto.</p>
+                    <ul class="checklist">
+                        <li><i class="fa-solid fa-circle-check"></i> UX/UI: navbar, sidebar, autenticação e responsividade.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Mapa interativo com clusters, ícones e tutorial.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Filtros, listagens, paginação e performance.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Policies de autorização, formulários e validações.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Pipeline de deploy com Jenkins + n8n e relatórios.</li>
+                    </ul>
+                    <div class="stat-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">Front + Back</span>
+                            <span class="stat-label">UX, mapas, filtros e policies</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Mapa & Filtros</span>
+                            <span class="stat-label">Clusters, marcadores e buscas refinadas</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">CI/CD</span>
+                            <span class="stat-label">Jenkins + n8n para relatórios e observabilidade</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-grid">
+                    <div class="mini-card">
+                        <div class="icon-circle"><i class="fa-solid fa-compass"></i></div>
+                        <h3>UX de navegação</h3>
+                        <p>Navbar/sidebar revisadas, feedbacks em telas de login, cadastro e recuperação.</p>
+                    </div>
+                    <div class="mini-card">
+                        <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h3>Mapa interativo</h3>
+                        <p>Clusters, ícones por tipo, zoom mobile e camadas reorganizadas.</p>
+                    </div>
+                    <div class="mini-card">
+                        <div class="icon-circle"><i class="fa-solid fa-filter"></i></div>
+                        <h3>Filtros e listas</h3>
+                        <p>Busca ampliada, paginação e UI padronizada para cards e filtros.</p>
+                    </div>
+                    <div class="mini-card">
+                        <div class="icon-circle"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Policies e acesso</h3>
+                        <p>Padronização de autorização, visibilidade por perfil e regras claras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section surface">
+            <div class="container narrow">
+                <h2>Principais entregas</h2>
+                <div class="deliverable-grid">
+                    <div class="deliverable-card">
+                        <h3>UX/UI e navegação</h3>
+                        <ul>
+                            <li>Navbar, sidebar e navegação mais consistentes e responsivas.</li>
+                            <li>Telas de autenticação alinhadas (login, cadastro, recuperação, termos).</li>
+                            <li>Feedbacks de loading e estados vazios para reduzir sensação de travamento.</li>
+                        </ul>
+                    </div>
+                    <div class="deliverable-card">
+                        <h3>Mapa interativo</h3>
+                        <ul>
+                            <li>Clusters e ícones específicos por tipo de recurso.</li>
+                            <li>Ajustes de zoom e interação mobile com cards/sidebars.</li>
+                            <li>Camadas reorganizadas e renomeadas para clareza.</li>
+                        </ul>
+                    </div>
+                    <div class="deliverable-card">
+                        <h3>Busca, filtros e listagens</h3>
+                        <ul>
+                            <li>Correções de filtros (UF, tipo, tags) e campo de busca expandido.</li>
+                            <li>UI padronizada para cards + área de filtros; paginação para grandes volumes.</li>
+                            <li>Correção de erros que afetavam queries e performance percebida.</li>
+                        </ul>
+                    </div>
+                    <div class="deliverable-card">
+                        <h3>Painéis e indicadores</h3>
+                        <ul>
+                            <li>Painéis com totais, gráficos por recortes e indicadores principais.</li>
+                            <li>Filtros unificados entre gráficos e listagens (tipo, UF, bioma, período).</li>
+                        </ul>
+                    </div>
+                    <div class="deliverable-card">
+                        <h3>Permissões e visibilidade</h3>
+                        <ul>
+                            <li>Refatoração das policies de autorização para maior confiabilidade.</li>
+                            <li>Visibilidade por perfil: o que pode listar, cadastrar ou visualizar.</li>
+                        </ul>
+                    </div>
+                    <div class="deliverable-card">
+                        <h3>Formulários e qualidade</h3>
+                        <ul>
+                            <li>Validações claras, máscaras e campos condicionais com dicas contextuais.</li>
+                            <li>Ajustes em campos críticos: site, coordenadas, telefone/whatsapp.</li>
+                            <li>Telas de visualização padronizadas em cards para melhor leitura.</li>
+                        </ul>
+                    </div>
+                    <div class="deliverable-card">
+                        <h3>Arquitetura e manutenção</h3>
+                        <ul>
+                            <li>Separação de rotas/serviços e refino de responsabilidades.</li>
+                            <li>Correções recorrentes em módulos críticos e consistência visual.</li>
+                        </ul>
+                    </div>
+                    <div class="deliverable-card">
+                        <h3>Deploy e observabilidade</h3>
+                        <ul>
+                            <li>Pipelines Jenkins com etapas de build, validações e cache.</li>
+                            <li>Integração com n8n para relatórios detalhados e centralização de execução.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section surface">
+            <div class="container narrow">
+                <h2>Espaços para imagens</h2>
+                <p>Substitua os blocos abaixo por prints do projeto (clique para selecionar e trocar por uma imagem real).</p>
+                <div class="slot-grid">
+                    <div class="image-slot" data-slot="Mapa interativo: clusters e ícones">
+                        <span class="slot-label">Mapa interativo</span>
+                        <span class="slot-note">Desktop / Mobile — clusters e ícones por tipo</span>
+                        <span class="slot-hint">Clique aqui e troque pelo print real.</span>
+                    </div>
+                    <div class="image-slot" data-slot="Listagens e filtros">
+                        <span class="slot-label">Listagens e filtros</span>
+                        <span class="slot-note">Cards + filtros padronizados e paginação</span>
+                        <span class="slot-hint">Clique aqui e troque pelo print real.</span>
+                    </div>
+                    <div class="image-slot" data-slot="Painéis e indicadores">
+                        <span class="slot-label">Painéis e indicadores</span>
+                        <span class="slot-note">Gráficos e métricas com filtros unificados</span>
+                        <span class="slot-hint">Clique aqui e troque pelo print real.</span>
+                    </div>
+                    <div class="image-slot" data-slot="Autenticação e navegação">
+                        <span class="slot-label">Autenticação e navegação</span>
+                        <span class="slot-note">Navbar/sidebar e telas de login/cadastro</span>
+                        <span class="slot-hint">Clique aqui e troque pelo print real.</span>
+                    </div>
+                    <div class="image-slot" data-slot="Policies e fluxos protegidos">
+                        <span class="slot-label">Permissões</span>
+                        <span class="slot-note">Fluxos com policies e visibilidade por perfil</span>
+                        <span class="slot-hint">Clique aqui e troque pelo print real.</span>
+                    </div>
+                    <div class="image-slot" data-slot="Pipeline CI/CD">
+                        <span class="slot-label">CI/CD + Observabilidade</span>
+                        <span class="slot-note">Jenkins + n8n (prints do pipeline e relatórios)</span>
+                        <span class="slot-hint">Clique aqui e troque pelo print real.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section surface">
+            <div class="container narrow">
+                <h2>Tecnologias e práticas</h2>
+                <div class="stack-grid">
+                    <span class="stack-pill">Laravel (Services/Policies)</span>
+                    <span class="stack-pill">Blade + Bootstrap</span>
+                    <span class="stack-pill">JavaScript (Leaflet/Clusters)</span>
+                    <span class="stack-pill">Mapa interativo</span>
+                    <span class="stack-pill">UX/UI</span>
+                    <span class="stack-pill">Paginação e performance</span>
+                    <span class="stack-pill">CI/CD Jenkins</span>
+                    <span class="stack-pill">n8n (relatórios)</span>
+                    <span class="stack-pill">Cache e otimização</span>
+                    <span class="stack-pill">Observabilidade</span>
+                </div>
+                <div class="highlight-grid">
+                    <div class="highlight">
+                        <i class="fa-solid fa-rocket"></i>
+                        <div>
+                            <h4>Entrega contínua</h4>
+                            <p>Pequenas melhorias liberadas com previsibilidade e cache atualizado.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <i class="fa-solid fa-person-shelter"></i>
+                        <div>
+                            <h4>Respeito às permissões</h4>
+                            <p>Policies padronizadas garantem que cada perfil veja apenas o que pode acionar.</p>
+                        </div>
+                    </div>
+                    <div class="highlight">
+                        <i class="fa-solid fa-hand-holding-hand"></i>
+                        <div>
+                            <h4>Guias e tutoriais</h4>
+                            <p>Modal/tutorial no mapa e microexplicações em campos e formulários.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer data-component="footer"></footer>
+
+    <script src="../../components.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

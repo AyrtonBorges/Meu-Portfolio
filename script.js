@@ -111,6 +111,10 @@ const skillDetails = {
     title: "MySQL Workbench",
     description: "Modelagem, migração e administração de bancos MySQL.",
   },
+  beekeeper: {
+    title: "Beekeeper Studio",
+    description: "Cliente SQL multiplataforma para consultas, inspecao de schemas e gestao visual de bancos.",
+  },
   libreoffice: {
     title: "LibreOffice",
     description: "Documentação, planilhas e relatórios offline.",
