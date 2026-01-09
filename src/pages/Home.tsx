@@ -263,7 +263,7 @@ export const Home = () => {
               <img
                 src={vitrineMapa}
                 className="card__image"
-                alt="Mapa da Vitrine da Restauracao"
+                alt="Mapa da Vitrine da Sociedade Brasileira de Restauração Ecológica"
                 onClick={() => openImageModal(vitrineMapa)}
                 role="button"
                 tabIndex={0}
@@ -275,7 +275,7 @@ export const Home = () => {
                 }}
               />
               <div className="card__content">
-                <p className="card__title">Vitrine da Restauração — contribuições</p>
+                <p className="card__title">Vitrine da Sociedade Brasileira de Restauração Ecológica — contribuições</p>
                 <p className="card__description">
                   Melhorias em UX, mapa interativo, filtros, permissões e pipeline de deploy.
                 </p>

@@ -24,14 +24,14 @@ export const Vitrine = () => {
   usePageClass("page-vitrine");
 
   React.useEffect(() => {
-    document.title = "Vitrine da Restauração — contribuições";
+    document.title = "Vitrine da Sociedade Brasileira de Restauração Ecológica — contribuições";
   }, []);
 
   return (
     <main>
       <section id="main-title">
         <div className="container">
-          <h1>Vitrine da Restauração</h1>
+          <h1>Vitrine da Sociedade Brasileira de Restauração Ecológica</h1>
           <p>Contribuições em front-end, back-end e operação para um produto mais confiável e amigável.</p>
         </div>
       </section>
@@ -42,7 +42,7 @@ export const Vitrine = () => {
             <div className="pill soft">Projeto em produção</div>
             <h2>Panorama rápido</h2>
             <p>
-              Atuei na evolução e manutenção do sistema Vitrine da Restauração, com foco em experiência do
+              Atuei na evolução e manutenção do sistema Vitrine da Sociedade Brasileira de Restauração Ecológica, com foco em experiência do
               usuário, confiabilidade das rotinas principais e padronização do produto.
             </p>
             <ul className="checklist">
