@@ -1,0 +1,98 @@
+﻿/* Layout */
+.page-aleatorios #main-title {
+  padding: 60px 0 40px;
+  background: linear-gradient(135deg, rgba(255, 138, 61, 0.12), rgba(77, 214, 255, 0.1));
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-aleatorios #main-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 138, 61, 0.22), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(77, 214, 255, 0.18), transparent 50%);
+  opacity: 0.9;
+}
+
+.page-aleatorios #main-title .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-aleatorios #main-title h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 6vw, 40px);
+}
+
+.page-aleatorios #main-title p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.page-aleatorios .project-section {
+  margin: 16px auto;
+  padding: 40px 0;
+  position: relative;
+}
+
+.page-aleatorios .project-section.surface {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.page-aleatorios .project-section.surface::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  width: min(1000px, 100% - 32px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 6px);
+  box-shadow: var(--shadow);
+  z-index: 0;
+}
+
+.page-aleatorios .project-section.surface > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-aleatorios .container.narrow {
+  width: min(900px, 100% - 32px);
+}
+
+.page-aleatorios .project-section h2 {
+  margin-top: 0;
+}
+
+.page-aleatorios .project-section p {
+  color: var(--muted);
+}
+
+.page-aleatorios .project-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.page-aleatorios .project-list li {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.page-aleatorios .project-list li:hover {
+  transform: translateY(-2px);
+  border-color: rgba(77, 214, 255, 0.6);
+}
