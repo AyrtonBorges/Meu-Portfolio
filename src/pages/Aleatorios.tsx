@@ -23,9 +23,9 @@ export const Aleatorios = () => {
           <h2>Listas de Projetos</h2>
           <p>Em breve adicionarei mais experimentos e pequenos estudos que valem ser vistos.</p>
           <ul className="project-list">
-            <li>
+            {/* <li>
               <strong>Deus:</strong> Acesse <Link to="/paginas/aleatorios/projetos/God">aqui</Link>.
-            </li>
+            </li> */}
           </ul>
         </div>
       </section>
