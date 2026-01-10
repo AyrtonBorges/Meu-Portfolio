@@ -36,27 +36,32 @@ export const Home = () => {
     document.title = "Meu Portfólio | Ayrton Borges";
   }, []);
 
-  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const whatsappNumber = "5522997218556";
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const messageLines = ["Ola! Tenho uma mensagem pelo site."];
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-
-      if (response.ok) {
-        window.alert("Obrigado pela mensagem! Vou responder em breve.");
-        form.reset();
-      } else {
-        window.alert("Opa! Houve um problema no envio, tente novamente.");
-      }
-    } catch (error) {
-      window.alert("Opa! Houve um problema no envio, tente novamente.");
+    if (name) {
+      messageLines.push(`Nome: ${name}`);
     }
+    if (email) {
+      messageLines.push(`Email: ${email}`);
+    }
+    if (message) {
+      messageLines.push(`Mensagem: ${message}`);
+    }
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      messageLines.join("\n")
+    )}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    form.reset();
   };
 
   const activeDetail = activeSkill ? skillDetails[activeSkill] : null;
@@ -320,17 +325,17 @@ export const Home = () => {
             <p>Conte sobre sua ideia ou envie um oi</p>
           </div>
           <div className="contact-grid surface">
-            <form action="https://formspree.io/f/mblrrwwl" method="post" onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit}>
               <label htmlFor="name">Nome</label>
               <input type="text" id="name" name="name" placeholder="Seu nome" required />
 
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="email@exemplo.com" required />
+              <label htmlFor="email">Email (opcional)</label>
+              <input type="email" id="email" name="email" placeholder="email@exemplo.com" />
 
               <label htmlFor="message">Mensagem</label>
               <textarea id="message" name="message" placeholder="Como posso ajudar?" required></textarea>
 
-              <button type="submit">Enviar</button>
+              <button type="submit">Enviar no WhatsApp</button>
             </form>
             <div className="contact-card">
               <h3>Vamos conversar</h3>
