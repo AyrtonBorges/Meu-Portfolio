@@ -11,7 +11,7 @@ export const Footer = () => {
             Pronto para <span>colaborar?</span>
           </h2>
           <div className="footer-social">
-            <a href="mailto:ayrton.cborges@outlook.com">
+            <a href="mailto:ayrtoncborges@gmail.com">
               <i className="fa-regular fa-envelope" aria-hidden="true"></i>
               Email
             </a>

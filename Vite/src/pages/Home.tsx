@@ -97,7 +97,7 @@ export const Home = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const whatsappNumber = "5522997218556";
+  const whatsappNumber = "5522997316779";
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
@@ -331,7 +331,7 @@ export const Home = () => {
                 manda uma mensagem.
               </p>
               <div className="contact-socials">
-                <a className="social-link" href="https://instagram.com/ayrtoncborges" target="_blank" rel="noreferrer">
+                <a className="social-link" href="https://instagram.com/ayrtonbdev" target="_blank" rel="noreferrer">
                   <i className="fab fa-instagram" aria-hidden="true"></i>
                   Instagram
                 </a>
@@ -343,9 +343,9 @@ export const Home = () => {
                   <i className="fab fa-linkedin" aria-hidden="true"></i>
                   LinkedIn
                 </a>
-                <a className="social-link" href="mailto:ayrton.cborges@outlook.com">
+                <a className="social-link" href="mailto:ayrtoncborges@gmail.com">
                   <i className="fa-regular fa-envelope" aria-hidden="true"></i>
-                  ayrton.cborges@outlook.com
+                  ayrtoncborges@gmail.com
                 </a>
               </div>
             </div>
