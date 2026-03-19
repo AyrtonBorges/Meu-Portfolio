@@ -19,6 +19,25 @@ import vitrineMapa from "../assets/vitrine/mapa.png";
 const d = (ms: number): React.CSSProperties =>
   ({ "--d": `${ms}ms` } as React.CSSProperties);
 
+const MARQUEE_WORDS = [
+  "JAVA", "REACT", "NODE.JS", "PYTHON", "TYPESCRIPT", "NEXT.JS",
+  "LARAVEL", "DOCKER", "ARDUINO", "MYSQL", "JENKINS", "GIT",
+  "FIGMA", "ESP32", "SPRING", "REST API",
+];
+
+const Marquee = () => (
+  <div className="marquee-strip" aria-hidden="true">
+    <div className="marquee-track">
+      {[...MARQUEE_WORDS, ...MARQUEE_WORDS].map((word, i) => (
+        <React.Fragment key={i}>
+          <span className="marquee-item">{word}</span>
+          <span className="marquee-item marquee-dot">&middot;</span>
+        </React.Fragment>
+      ))}
+    </div>
+  </div>
+);
+
 const skillCategories = [
   { title: "Linguagens & Frameworks", items: programmingSkills },
   { title: "Ferramentas de Desenvolvimento", items: softwareToolsSkills },
@@ -114,7 +133,7 @@ export const Home = () => {
           </div>
 
           <h1 className="reveal" style={d(80)}>
-            Ayrton<br />Borges<span className="cursor" aria-hidden="true">_</span>
+            Ayrton Borges<span className="cursor" aria-hidden="true">_</span>
           </h1>
 
           <p className="hero-sub reveal" style={d(160)}>
@@ -132,30 +151,27 @@ export const Home = () => {
           </div>
 
           <div className="hero-tech reveal" style={d(320)}>
-            <span>Java & Node</span>
-            <span>React & Next</span>
-            <span>Python</span>
-            <span>Arduino / ESP32</span>
+            <span><i className="fa-brands fa-java" aria-hidden="true"></i> Java & Node</span>
+            <span><i className="fa-brands fa-react" aria-hidden="true"></i> React & Next</span>
+            <span><i className="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+            <span><i className="fa-solid fa-microchip" aria-hidden="true"></i> Arduino / ESP32</span>
           </div>
         </div>
       </section>
 
-      {/* ── About ── */}
+      {/* ── Marquee ── */}
+      <Marquee />
+
+      {/* ── About — Bento Grid ── */}
       <section id="about">
         <div className="container">
           <span className="section-label reveal">// sobre</span>
+          <h2 className="section-title reveal" style={d(60)}>Sobre Mim</h2>
+          <p className="section-desc reveal" style={d(100)}>Trajetória, filosofia e o que me move</p>
 
-          <div className="about-grid">
-            <div className="about-photo reveal" style={d(80)}>
-              <img
-                src={euImage}
-                alt="Ayrton Borges"
-                onClick={() => setModalImage(euImage)}
-              />
-            </div>
-
-            <div className="about-text reveal" style={d(160)}>
-              <h2>Sobre Mim</h2>
+          <div className="bento-grid">
+            <div className="bento-card bento-bio reveal" style={d(140)}>
+              <h2>Desenvolvedor que constrói de ponta a ponta</h2>
               <p>
                 Sou <strong>Ayrton Borges</strong>, desenvolvedor full-stack formado em Técnico em
                 Informática e cursando Engenharia de Computação. Trabalho em produtos digitais
@@ -166,55 +182,63 @@ export const Home = () => {
                 de Leite), com foco no back-end e integração mobile — em um time de 7 pessoas, com
                 bolsas CNPq e Faperj.
               </p>
-              <div className="about-quote">
-                <p>
-                  "Se parece difícil, eu quebro em partes. Se não existe, eu prototipo com o que tenho."
-                </p>
-                <span className="quote-attr">// Foco em entregar valor rápido, depois refinar.</span>
-              </div>
             </div>
-          </div>
 
-          <div className="stats-row reveal" style={d(240)}>
-            <div className="stat-card">
-              <span className="stat-value orange">7+</span>
-              <span className="stat-label">pessoas no time PQFL</span>
+            <div className="bento-card bento-photo reveal" style={d(200)}>
+              <img
+                src={euImage}
+                alt="Ayrton Borges"
+                onClick={() => setModalImage(euImage)}
+              />
             </div>
-            <div className="stat-card">
-              <span className="stat-value cyan">3</span>
-              <span className="stat-label">especialidades: web, bots, IoT</span>
-            </div>
-            <div className="stat-card">
-              <span className="stat-value green">∞</span>
-              <span className="stat-label">curiosidade para aprender</span>
-            </div>
-          </div>
 
-          <div className="focus-grid">
-            <div className="focus-card reveal" style={d(300)}>
-              <div className="focus-icon orange">
-                <i className="fa-solid fa-code"></i>
+            <div className="bento-stats reveal" style={d(260)}>
+              <div className="stat-card">
+                <span className="stat-value orange">7+</span>
+                <span className="stat-label">pessoas no time PQFL</span>
               </div>
-              <h3>Web Full-stack</h3>
-              <p>Interfaces com React/Next.js e APIs com Node, Java e Laravel.</p>
+              <div className="stat-card">
+                <span className="stat-value cyan">3</span>
+                <span className="stat-label">especialidades: web, bots, IoT</span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-value green">∞</span>
+                <span className="stat-label">curiosidade para aprender</span>
+              </div>
             </div>
-            <div className="focus-card reveal" style={d(380)}>
-              <div className="focus-icon cyan">
-                <i className="fa-solid fa-robot"></i>
-              </div>
-              <h3>Bots & Automação</h3>
-              <p>Scripts Python, automações com n8n e integrações com APIs externas.</p>
+
+            <div className="bento-card bento-quote reveal" style={d(320)}>
+              <blockquote>
+                "Se parece difícil, eu quebro em partes. Se não existe, eu prototipo com o que tenho."
+              </blockquote>
+              <span className="quote-attr">// Foco em entregar valor rápido, depois refinar.</span>
             </div>
-            <div className="focus-card reveal" style={d(460)}>
-              <div className="focus-icon green">
-                <i className="fa-solid fa-microchip"></i>
+
+            <div className="bento-card bento-focus reveal" style={d(380)}>
+              <h2>Áreas de foco</h2>
+              <div className="focus-row">
+                <div className="focus-item orange">
+                  <i className="fa-solid fa-code" aria-hidden="true"></i>
+                  <h3>Web Full-stack</h3>
+                  <p>React/Next.js, Node, Java e Laravel</p>
+                </div>
+                <div className="focus-item cyan">
+                  <i className="fa-solid fa-robot" aria-hidden="true"></i>
+                  <h3>Bots & Automação</h3>
+                  <p>Python, n8n e integrações com APIs</p>
+                </div>
+                <div className="focus-item green">
+                  <i className="fa-solid fa-microchip" aria-hidden="true"></i>
+                  <h3>IoT & Hardware</h3>
+                  <p>Arduino, ESP32 e comunicação serial</p>
+                </div>
               </div>
-              <h3>IoT & Hardware</h3>
-              <p>Protótipos com Arduino e ESP32, sensores e comunicação serial.</p>
             </div>
           </div>
         </div>
       </section>
+
+      <hr className="gradient-divider" />
 
       {/* ── Skills ── */}
       <section id="skills">
@@ -245,6 +269,8 @@ export const Home = () => {
           ))}
         </div>
       </section>
+
+      <hr className="gradient-divider" />
 
       {/* ── Projects ── */}
       <section id="projects">
@@ -286,6 +312,8 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+      <hr className="gradient-divider" />
 
       {/* ── Contact ── */}
       <section id="contact">
