@@ -20,19 +20,19 @@ export const Pqfl = () => {
   }, []);
 
   React.useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
         setModalImage(null);
         setIsMobileShot(false);
       }
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const openModal = (src: string, mobileShot = false) => {
+  const openModal = (src: string, mobile = false) => {
     setModalImage(src);
-    setIsMobileShot(mobileShot);
+    setIsMobileShot(mobile);
   };
 
   return (
@@ -48,7 +48,7 @@ export const Pqfl = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow intro-grid">
           <div className="reveal">
             <div className="pill soft">Concluído</div>
@@ -109,7 +109,7 @@ export const Pqfl = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 01</span>
           <h2>Introdução</h2>
@@ -127,7 +127,7 @@ export const Pqfl = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 02</span>
           <h2>Versão Mobile</h2>
@@ -158,7 +158,7 @@ export const Pqfl = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 03</span>
           <h2>Algumas fotos do projeto</h2>
@@ -175,7 +175,7 @@ export const Pqfl = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 04</span>
           <h2>Objetivo</h2>
@@ -209,7 +209,7 @@ export const Pqfl = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 05</span>
           <h2>Metodologia</h2>
@@ -257,7 +257,7 @@ export const Pqfl = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <div className="project-images2">
             <img src={notion} alt="Lista de tarefas no Notion" onClick={() => openModal(notion)} />
@@ -266,7 +266,7 @@ export const Pqfl = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 06</span>
           <h2>Arquitetura do sistema</h2>
@@ -285,14 +285,14 @@ export const Pqfl = () => {
               <p>MySQL Server + Workbench para modelagem, versionamento de schema e queries otimizadas.</p>
             </div>
           </div>
-          <h3 style={{ marginTop: "24px" }}>Tela do projeto</h3>
+          <h3 style={{ marginTop: "24px", fontSize: "16px", fontWeight: 700 }}>Tela do projeto</h3>
           <div className="project-images2">
             <img src={projeto} alt="Tela do projeto em Java" onClick={() => openModal(projeto)} />
           </div>
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 07</span>
           <h2>Tecnologias utilizadas</h2>

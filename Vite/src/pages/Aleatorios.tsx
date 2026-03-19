@@ -23,7 +23,7 @@ export const Aleatorios = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 01</span>
           <h2>Lista de Projetos</h2>

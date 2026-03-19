@@ -8,7 +8,7 @@ body.page-god {
   --god-text: #f3f4f6;
   --god-muted: #c7cbd3;
   --god-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
-  font-family: var(--font-body);
+  font-family: var(--font);
   margin: 0;
   padding: 0;
   background: radial-gradient(circle at 20% 10%, rgba(255, 216, 107, 0.18), transparent 40%),
@@ -61,7 +61,7 @@ body.page-god {
   font-weight: 700;
   color: var(--god-accent);
   letter-spacing: 0.08em;
-  font-family: var(--font-display);
+  font-family: var(--font);
   text-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -251,7 +251,7 @@ body.page-god {
   font-size: clamp(32px, 6vw, 54px);
   color: var(--god-accent);
   margin: 0 0 12px;
-  font-family: var(--font-display);
+  font-family: var(--font);
   letter-spacing: 1px;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
@@ -296,7 +296,7 @@ body.page-god {
   color: var(--god-accent);
   text-align: center;
   margin-bottom: 18px;
-  font-family: var(--font-display);
+  font-family: var(--font);
 }
 
 .page-god #project-features ul,

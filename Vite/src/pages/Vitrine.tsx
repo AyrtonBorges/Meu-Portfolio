@@ -42,7 +42,7 @@ export const Vitrine = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow intro-grid">
           <div className="reveal">
             <div className="pill soft">Concluído</div>
@@ -74,7 +74,7 @@ export const Vitrine = () => {
                 <span className="stat-label">UX, mapas, filtros e policies</span>
               </div>
               <div className="stat-card">
-                <span className="stat-number">Mapa &amp; Filtros</span>
+                <span className="stat-number">Mapa & Filtros</span>
                 <span className="stat-label">Clusters, marcadores e buscas refinadas</span>
               </div>
               <div className="stat-card">
@@ -116,7 +116,7 @@ export const Vitrine = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 01</span>
           <h2>Principais entregas</h2>
@@ -185,7 +185,7 @@ export const Vitrine = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 02</span>
           <h2>Exemplos da plataforma</h2>
@@ -204,7 +204,7 @@ export const Vitrine = () => {
         </div>
       </section>
 
-      <section className="project-section surface">
+      <section className="project-section">
         <div className="container narrow reveal">
           <span className="section-num">// 03</span>
           <h2>Tecnologias e práticas</h2>
@@ -220,7 +220,7 @@ export const Vitrine = () => {
             <span className="stack-pill">Cache e otimização</span>
             <span className="stack-pill">Observabilidade</span>
           </div>
-          <div className="highlight-grid">
+          <div className="highlight-grid" style={{ marginTop: "32px" }}>
             <div className="highlight">
               <i className="fa-solid fa-rocket"></i>
               <div>

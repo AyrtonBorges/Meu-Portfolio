@@ -5,13 +5,12 @@ export const Footer = () => {
 
   return (
     <footer>
-      <div className="container footer-shell">
-        <div className="footer-cta">
-          <p className="footer-cta-text">
-            Pronto para<br />
-            <span>colaborar?</span>
-          </p>
-          <div className="footer-links">
+      <div className="container">
+        <div className="footer-top">
+          <h2 className="footer-heading">
+            Pronto para <span>colaborar?</span>
+          </h2>
+          <div className="footer-social">
             <a href="mailto:ayrton.cborges@outlook.com">
               <i className="fa-regular fa-envelope" aria-hidden="true"></i>
               Email
@@ -20,11 +19,7 @@ export const Footer = () => {
               <i className="fab fa-github" aria-hidden="true"></i>
               GitHub
             </a>
-            <a
-              href="https://www.linkedin.com/in/ayrton-borges-620aa1168"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://www.linkedin.com/in/ayrton-borges-620aa1168" target="_blank" rel="noreferrer">
               <i className="fab fa-linkedin" aria-hidden="true"></i>
               LinkedIn
             </a>
@@ -36,7 +31,7 @@ export const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p className="footnote">// &copy; {year} Ayrton Borges — portfólio em constante evolução.</p>
+          <p className="footer-copy">// &copy; {year} Ayrton Borges</p>
         </div>
       </div>
     </footer>
