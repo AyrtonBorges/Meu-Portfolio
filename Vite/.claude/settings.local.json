@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm run:*)",
-      "Bash(find /c/Users/ayrto/OneDrive/Documentos/Programacao/Meu-Portfolio/Vite -not -path */node_modules/* -not -path */dist/* -type f)"
+      "Bash(find /c/Users/ayrto/OneDrive/Documentos/Programacao/Meu-Portfolio/Vite -not -path */node_modules/* -not -path */dist/* -type f)",
+      "Bash(cp:*)",
+      "Bash(npx serve:*)"
     ]
   }
 }

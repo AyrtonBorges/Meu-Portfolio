@@ -1,5 +1,5 @@
 {
-  "name": "LS TEAM - Forja de Gigantes",
+  "name": "AyrtonBorges",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -56,7 +56,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview"
   }
 }
