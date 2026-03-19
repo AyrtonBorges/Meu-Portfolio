@@ -6,11 +6,11 @@ export const Footer = () => {
   return (
     <footer>
       <div className="container footer-shell">
-        <div className="footer-top">
-          <div>
-            <strong>Pronto para colaborar?</strong>
-            <div className="muted">Projetos, bots, IoT e produtos digitais.</div>
-          </div>
+        <div className="footer-cta">
+          <p className="footer-cta-text">
+            Pronto para<br />
+            <span>colaborar?</span>
+          </p>
           <div className="footer-links">
             <a href="mailto:ayrton.cborges@outlook.com">
               <i className="fa-regular fa-envelope" aria-hidden="true"></i>
@@ -21,7 +21,7 @@ export const Footer = () => {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/ayrton-borges-620aa1168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              href="https://www.linkedin.com/in/ayrton-borges-620aa1168"
               target="_blank"
               rel="noreferrer"
             >
@@ -34,7 +34,10 @@ export const Footer = () => {
             </Link>
           </div>
         </div>
-        <p className="footnote">&copy; {year} Ayrton Borges. Portfólio em constante evolução.</p>
+
+        <div className="footer-bottom">
+          <p className="footnote">// &copy; {year} Ayrton Borges — portfólio em constante evolução.</p>
+        </div>
       </div>
     </footer>
   );

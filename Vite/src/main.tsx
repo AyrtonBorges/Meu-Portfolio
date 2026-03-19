@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { App } from "./App";
 import "./shared.css";
 import "./styles.css";
+import "./paginas/project-detail.css";
 import "./paginas/vitrine/styles.css";
 import "./paginas/pqfl/styles.css";
 import "./paginas/aleatorios/styles.css";

@@ -1,5 +1,6 @@
 import React from "react";
 import { usePageClass } from "../hooks/usePageClass";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import appMobile from "../assets/pqfl/app_mobile.png";
 import reuniaoSemanal from "../assets/pqfl/reuniaosemanal.png";
 import foto1 from "../assets/pqfl/foto1.jpg";
@@ -10,11 +11,12 @@ import projeto from "../assets/pqfl/projeto.png";
 
 export const Pqfl = () => {
   usePageClass("page-pqfl");
+  useScrollReveal();
   const [modalImage, setModalImage] = React.useState<string | null>(null);
   const [isMobileShot, setIsMobileShot] = React.useState(false);
 
   React.useEffect(() => {
-    document.title = "Projeto Sistema PQFL";
+    document.title = "Sistema PQFL — Ayrton Borges";
   }, []);
 
   React.useEffect(() => {
@@ -24,7 +26,6 @@ export const Pqfl = () => {
         setIsMobileShot(false);
       }
     };
-
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
@@ -38,6 +39,10 @@ export const Pqfl = () => {
     <main>
       <section id="main-title">
         <div className="container">
+          <span className="project-label">
+            <span className="dot" aria-hidden="true"></span>
+            // projeto concluído
+          </span>
           <h1>Sistema de Gerenciamento PQFL</h1>
           <p>Software e app mobile para garantir qualidade do leite e conformidade com IN 76/77.</p>
         </div>
@@ -45,8 +50,8 @@ export const Pqfl = () => {
 
       <section className="project-section surface">
         <div className="container narrow intro-grid">
-          <div>
-            <div className="pill soft">Projeto em desenvolvimento</div>
+          <div className="reveal">
+            <div className="pill soft">Concluído</div>
             <h2>Panorama rápido</h2>
             <p>
               Ferramenta completa para o Plano de Qualificação de Fornecedores de Leite (PQFL),
@@ -54,16 +59,13 @@ export const Pqfl = () => {
             </p>
             <ul className="checklist">
               <li>
-                <i className="fa-solid fa-circle-check"></i> Visitas técnicas, laudos e histórico por
-                produtor.
+                <i className="fa-solid fa-circle-check"></i> Visitas técnicas, laudos e histórico por produtor.
               </li>
               <li>
-                <i className="fa-solid fa-circle-check"></i> Alertas de não conformidade (CPP, CBT,
-                temperatura, etc.).
+                <i className="fa-solid fa-circle-check"></i> Alertas de não conformidade (CPP, CBT, temperatura, etc.).
               </li>
               <li>
-                <i className="fa-solid fa-circle-check"></i> Relatórios e gráficos automáticos para
-                auditorias.
+                <i className="fa-solid fa-circle-check"></i> Relatórios e gráficos automáticos para auditorias.
               </li>
             </ul>
             <div className="stat-grid">
@@ -81,7 +83,7 @@ export const Pqfl = () => {
               </div>
             </div>
           </div>
-          <div className="feature-grid">
+          <div className="feature-grid reveal" style={{ "--d": "120ms" } as React.CSSProperties}>
             <div className="mini-card">
               <div className="icon-circle">
                 <i className="fa-solid fa-desktop"></i>
@@ -108,7 +110,8 @@ export const Pqfl = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 01</span>
           <h2>Introdução</h2>
           <p>
             Software para gerenciamento do Plano de Qualificação de Fornecedores de Leite (PQFL),
@@ -125,7 +128,8 @@ export const Pqfl = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 02</span>
           <h2>Versão Mobile</h2>
           <p>
             Além da versão desktop, o projeto conta com aplicativo em <strong>React Native</strong>,
@@ -134,16 +138,13 @@ export const Pqfl = () => {
           </p>
           <ul className="checklist">
             <li>
-              <i className="fa-solid fa-signal"></i> Funciona online/offline com sincronização
-              posterior.
+              <i className="fa-solid fa-signal"></i> Funciona online/offline com sincronização posterior.
             </li>
             <li>
-              <i className="fa-solid fa-clipboard-list"></i> Formulários guiados para visitas
-              técnicas.
+              <i className="fa-solid fa-clipboard-list"></i> Formulários guiados para visitas técnicas.
             </li>
             <li>
-              <i className="fa-solid fa-location-dot"></i> Registro de localização e contexto da
-              coleta.
+              <i className="fa-solid fa-location-dot"></i> Registro de localização e contexto da coleta.
             </li>
           </ul>
           <div className="project-images2">
@@ -158,7 +159,8 @@ export const Pqfl = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 03</span>
           <h2>Algumas fotos do projeto</h2>
           <p>
             As fotos registram as reuniões semanais da equipe, que começou com 5 pessoas e cresceu
@@ -174,13 +176,12 @@ export const Pqfl = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 04</span>
           <h2>Objetivo</h2>
           <p>
             Desenvolver um software desktop especializado para o gerenciamento completo do PQFL,
-            automatizando controle de qualidade e conformidade de fornecedores. Facilita visitas
-            técnicas, análise de laboratório, gestão de produtores/tanques e gera relatórios e
-            alertas automáticos.
+            automatizando controle de qualidade e conformidade de fornecedores.
           </p>
           <div className="highlight-grid">
             <div className="highlight">
@@ -209,7 +210,8 @@ export const Pqfl = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 05</span>
           <h2>Metodologia</h2>
           <p>
             O desenvolvimento segue a abordagem ágil <strong>Scrumban</strong>, unindo práticas de
@@ -256,7 +258,7 @@ export const Pqfl = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
           <div className="project-images2">
             <img src={notion} alt="Lista de tarefas no Notion" onClick={() => openModal(notion)} />
             <img src={notion2} alt="Sprints do projeto no Notion" onClick={() => openModal(notion2)} />
@@ -265,7 +267,8 @@ export const Pqfl = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 06</span>
           <h2>Arquitetura do sistema</h2>
           <p>O Sistema PQFL é dividido em camadas claras:</p>
           <div className="arch-grid">
@@ -282,7 +285,7 @@ export const Pqfl = () => {
               <p>MySQL Server + Workbench para modelagem, versionamento de schema e queries otimizadas.</p>
             </div>
           </div>
-          <h3>Tela do projeto</h3>
+          <h3 style={{ marginTop: "24px" }}>Tela do projeto</h3>
           <div className="project-images2">
             <img src={projeto} alt="Tela do projeto em Java" onClick={() => openModal(projeto)} />
           </div>
@@ -290,7 +293,8 @@ export const Pqfl = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 07</span>
           <h2>Tecnologias utilizadas</h2>
           <div className="stack-grid">
             <span className="stack-pill">Java</span>
@@ -308,33 +312,25 @@ export const Pqfl = () => {
         </div>
       </section>
 
+      {/* Modal */}
       <div
-        id="imageModal"
         className="modal"
         style={{ display: modalImage ? "block" : "none" }}
-        onClick={() => {
-          setModalImage(null);
-          setIsMobileShot(false);
-        }}
+        onClick={() => { setModalImage(null); setIsMobileShot(false); }}
       >
-        <span
-          className="close"
-          onClick={() => {
-            setModalImage(null);
-            setIsMobileShot(false);
-          }}
+        <button
+          className="modal-close"
+          onClick={() => { setModalImage(null); setIsMobileShot(false); }}
           aria-label="Fechar modal"
         >
-          &times;
-        </span>
+          ×
+        </button>
         <img
           className={`modal-content ${isMobileShot ? "mobile-shot-modal" : ""}`}
-          id="modalImage"
           src={modalImage ?? ""}
           alt=""
-          onClick={(event) => event.stopPropagation()}
+          onClick={(e) => e.stopPropagation()}
         />
-        <div id="caption"></div>
       </div>
     </main>
   );

@@ -4,16 +4,15 @@ import { Link } from "../router";
 type NavLink = {
   id: string;
   label: string;
-  icon: string;
   hash: string;
 };
 
 const links: NavLink[] = [
-  { id: "home", label: "Home", icon: "fa-house", hash: "#home" },
-  { id: "about", label: "Sobre", icon: "fa-user", hash: "#about" },
-  { id: "skills", label: "Habilidades", icon: "fa-bolt", hash: "#skills" },
-  { id: "projects", label: "Projetos", icon: "fa-diagram-project", hash: "#projects" },
-  { id: "contact", label: "Contato", icon: "fa-message", hash: "#contact" },
+  { id: "home",     label: "Home",        hash: "#home"     },
+  { id: "about",    label: "Sobre",       hash: "#about"    },
+  { id: "skills",   label: "Skills",      hash: "#skills"   },
+  { id: "projects", label: "Projetos",    hash: "#projects" },
+  { id: "contact",  label: "Contato",     hash: "#contact"  },
 ];
 
 type NavbarProps = {
@@ -22,15 +21,16 @@ type NavbarProps = {
 
 export const Navbar = ({ activeId }: NavbarProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
-
   const closeMenu = () => setIsOpen(false);
 
   return (
     <header className="site-header">
       <div className="container nav-shell">
-        <Link className="logo" to="/#home" aria-label="Voltar para a seção inicial" onClick={closeMenu}>
-          <i className="fa-solid fa-terminal" aria-hidden="true"></i>
-          <span>Ayrton Borges</span>
+        <Link className="logo" to="/#home" aria-label="Voltar para o início" onClick={closeMenu}>
+          <span className="logo-mark" aria-hidden="true">
+            <i className="fa-solid fa-terminal"></i>
+          </span>
+          Ayrton Borges
         </Link>
 
         <button
@@ -43,7 +43,7 @@ export const Navbar = ({ activeId }: NavbarProps) => {
           <span></span>
         </button>
 
-        <nav className={isOpen ? "is-open" : ""}>
+        <nav className={isOpen ? "is-open" : ""} aria-label="Navegação principal">
           <ul>
             {links.map((link) => (
               <li key={link.id}>
@@ -53,8 +53,7 @@ export const Navbar = ({ activeId }: NavbarProps) => {
                   className={activeId === link.id ? "is-active" : ""}
                   onClick={closeMenu}
                 >
-                  <i className={`fa-solid ${link.icon}`} aria-hidden="true"></i>
-                  <span>{link.label}</span>
+                  {link.label}
                 </Link>
               </li>
             ))}
@@ -62,9 +61,8 @@ export const Navbar = ({ activeId }: NavbarProps) => {
         </nav>
 
         <div className="nav-cta">
-          <Link className="pill" to="/#projects" onClick={closeMenu}>
-            <i className="fa-solid fa-rocket" aria-hidden="true"></i>
-            <span>Ver projetos</span>
+          <Link to="/#contact" onClick={closeMenu}>
+            Fale comigo
           </Link>
         </div>
       </div>

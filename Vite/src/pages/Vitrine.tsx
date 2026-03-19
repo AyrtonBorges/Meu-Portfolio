@@ -1,5 +1,6 @@
 import React from "react";
 import { usePageClass } from "../hooks/usePageClass";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import mapaImage from "../assets/vitrine/mapa.png";
 import painelImage from "../assets/vitrine/painel.png";
 
@@ -7,14 +8,14 @@ const examples = [
   {
     id: "mapa",
     title: "Mapa interativo",
-    description: "Clusters e icones por tipo para navegacao rapida.",
+    description: "Clusters e ícones por tipo para navegação rápida.",
     image: mapaImage,
     alt: "Mapa interativo da plataforma",
   },
   {
     id: "painel",
     title: "Painel de indicadores",
-    description: "Graficos e metricas com filtros unificados.",
+    description: "Gráficos e métricas com filtros unificados.",
     image: painelImage,
     alt: "Painel de indicadores da plataforma",
   },
@@ -22,15 +23,20 @@ const examples = [
 
 export const Vitrine = () => {
   usePageClass("page-vitrine");
+  useScrollReveal();
 
   React.useEffect(() => {
-    document.title = "Vitrine da Sociedade Brasileira de Restauração Ecológica — contribuições";
+    document.title = "Vitrine SBRE — Ayrton Borges";
   }, []);
 
   return (
     <main>
       <section id="main-title">
         <div className="container">
+          <span className="project-label">
+            <span className="dot" aria-hidden="true"></span>
+            // projeto concluído
+          </span>
           <h1>Vitrine da Sociedade Brasileira de Restauração Ecológica</h1>
           <p>Contribuições em front-end, back-end e operação para um produto mais confiável e amigável.</p>
         </div>
@@ -38,32 +44,28 @@ export const Vitrine = () => {
 
       <section className="project-section surface">
         <div className="container narrow intro-grid">
-          <div>
-            <div className="pill soft">Projeto em produção</div>
+          <div className="reveal">
+            <div className="pill soft">Concluído</div>
             <h2>Panorama rápido</h2>
             <p>
-              Atuei na evolução e manutenção do sistema Vitrine da Sociedade Brasileira de Restauração Ecológica, com foco em experiência do
+              Atuei na evolução e manutenção do sistema Vitrine da SBRE, com foco em experiência do
               usuário, confiabilidade das rotinas principais e padronização do produto.
             </p>
             <ul className="checklist">
               <li>
-                <i className="fa-solid fa-circle-check"></i> UX/UI: navbar, sidebar, autenticação e
-                responsividade.
+                <i className="fa-solid fa-circle-check"></i> UX/UI: navbar, sidebar, autenticação e responsividade.
               </li>
               <li>
-                <i className="fa-solid fa-circle-check"></i> Mapa interativo com clusters, ícones e
-                tutorial.
+                <i className="fa-solid fa-circle-check"></i> Mapa interativo com clusters, ícones e tutorial.
               </li>
               <li>
                 <i className="fa-solid fa-circle-check"></i> Filtros, listagens, paginação e performance.
               </li>
               <li>
-                <i className="fa-solid fa-circle-check"></i> Policies de autorização, formulários e
-                validações.
+                <i className="fa-solid fa-circle-check"></i> Policies de autorização, formulários e validações.
               </li>
               <li>
-                <i className="fa-solid fa-circle-check"></i> Pipeline de deploy com Jenkins + n8n e
-                relatórios.
+                <i className="fa-solid fa-circle-check"></i> Pipeline de deploy com Jenkins + n8n e relatórios.
               </li>
             </ul>
             <div className="stat-grid">
@@ -77,11 +79,11 @@ export const Vitrine = () => {
               </div>
               <div className="stat-card">
                 <span className="stat-number">CI/CD</span>
-                <span className="stat-label">Jenkins + n8n para relatórios e observabilidade</span>
+                <span className="stat-label">Jenkins + n8n para relatórios</span>
               </div>
             </div>
           </div>
-          <div className="feature-grid">
+          <div className="feature-grid reveal" style={{ "--d": "120ms" } as React.CSSProperties}>
             <div className="mini-card">
               <div className="icon-circle">
                 <i className="fa-solid fa-compass"></i>
@@ -115,7 +117,8 @@ export const Vitrine = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 01</span>
           <h2>Principais entregas</h2>
           <div className="deliverable-grid">
             <div className="deliverable-card">
@@ -183,7 +186,8 @@ export const Vitrine = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 02</span>
           <h2>Exemplos da plataforma</h2>
           <p>Alguns recortes reais da interface com mapa interativo e indicadores.</p>
           <div className="example-grid">
@@ -201,7 +205,8 @@ export const Vitrine = () => {
       </section>
 
       <section className="project-section surface">
-        <div className="container narrow">
+        <div className="container narrow reveal">
+          <span className="section-num">// 03</span>
           <h2>Tecnologias e práticas</h2>
           <div className="stack-grid">
             <span className="stack-pill">Laravel (Services/Policies)</span>
